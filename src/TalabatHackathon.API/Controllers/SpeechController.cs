@@ -1,5 +1,4 @@
-﻿using System.Net;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TalabatHackathon.API.Models;
 
 namespace TalabatHackathon.API.Controllers
