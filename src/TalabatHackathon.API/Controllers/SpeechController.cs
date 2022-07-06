@@ -27,7 +27,7 @@ namespace TalabatHackathon.API.Controllers
             var result = new SpeechResponseModel();
             result.Language = model.Language;
             result.Text = model.Text;
-            result.Path = $"https://talabat-hackathon.herokuapp.com/{key}";
+            result.Path = $"https://talabat-hackathon.herokuapp.com/api/v1/audio/{key}";
 
             if (!_audioFileService.Exists(key))
             {
