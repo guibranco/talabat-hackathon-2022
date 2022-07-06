@@ -19,5 +19,5 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "healthly"
-          docker: true      
+          usedocker: true      
 
