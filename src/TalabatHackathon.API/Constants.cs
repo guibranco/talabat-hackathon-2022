@@ -2,7 +2,7 @@
 {
     public static class Constants
     {
-        public static Dictionary<string, string> TranslateLanguages = new Dictionary<string, string>
+        public static Dictionary<string, string> TranslateLanguages = new()
         {
             { "Afrikaans", "af" },
             { "Albanian", "sq" },

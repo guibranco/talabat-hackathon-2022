@@ -11,6 +11,7 @@ public class MemoryCacheSpeechService : ISpeechService
     public MemoryCacheSpeechService(ISpeechService speechService)
     {
         _speechService = speechService;
+        _cacheRepository = new();
     }
 
     public Task<byte[]> GetSpeech(string language, string text)
