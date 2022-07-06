@@ -18,6 +18,21 @@ namespace TalabatHackathon.API.Controllers
         [ProducesResponseType(typeof(TranslateResponseModel), 200)]
         public async Task<IActionResult> TranslanteAsync([FromBody] TranslateRequestModel model)
         {
+            if (!Constants.ValidLanguages.Contains(model.SourceLanguage))
+            {
+                ModelState.AddModelError(nameof(model.SourceLanguage), "Invalid source language");
+            }
+
+            if (!Constants.ValidLanguages.Contains(model.DestinationLanguage))
+            {
+                ModelState.AddModelError(nameof(model.DestinationLanguage), "Invalid destination language");
+            }
+            
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("validLanguages", string.Join(',', Constants.ValidLanguages));
+                return BadRequest(ModelState);
+            }
 
             var result =
                 await _translateService.TranslateAsync(model.SourceLanguage, model.DestinationLanguage, model.Text);
