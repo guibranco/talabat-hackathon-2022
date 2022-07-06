@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TalabatHackathon.API.Models;
+using TalabatHackathon.API.Services;
 
 namespace TalabatHackathon.API.Controllers
 {
@@ -8,15 +9,15 @@ namespace TalabatHackathon.API.Controllers
     [ApiVersion("1.0")]
     public class SpeechController : ControllerBase
     {
-        private const string _fileLocation = "file_example_MP3_700KB.mp3";
-        
-        [HttpPost]
-        public IActionResult Speech(
-            [FromBody] SpeechRequestModel model,
-            CancellationToken cancellationToken)
-        {
+        private readonly ISpeechService _speechService;
 
-            return File(new FileStream(_fileLocation, FileMode.Open, FileAccess.Read), "audio/mp3", true);
+        public SpeechController(ISpeechService speechService) => _speechService = speechService;
+
+        [HttpPost]
+        public async Task<IActionResult> Speech([FromBody] SpeechRequestModel model, CancellationToken cancellationToken)
+        {
+            var result = await _speechService.GetSpeech(model.DestinationLanguage, model.Text);
+            return File(result, "audio/mp3");
         }
     }
 }

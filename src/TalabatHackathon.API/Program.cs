@@ -15,8 +15,11 @@ var configurationBuilder = new ConfigurationBuilder()
 builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
 builder.Services.Scan(scan => scan.FromAssemblyOf<Program>());
+
 builder.Services.AddSingleton<ITranslateService, TranslateService>();
 builder.Services.Decorate<ITranslateService, CacheTranslateService>();
+
+builder.Services.AddSingleton<ISpeechService, SpeechService>();
 
 builder.Services.AddHealthChecks();
 builder.Services.AddControllers();
