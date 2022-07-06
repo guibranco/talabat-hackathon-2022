@@ -4,7 +4,7 @@
     using TalabatHackathon.API.Models;
 
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}/translate")]
     [ApiVersion("1.0")]
     public class TranslateController : ControllerBase
     {

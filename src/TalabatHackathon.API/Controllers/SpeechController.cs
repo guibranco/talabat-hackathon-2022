@@ -4,7 +4,7 @@ using TalabatHackathon.API.Models;
 namespace TalabatHackathon.API.Controllers
 {
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/v{version:apiVersion}/speech")]
     [ApiVersion("1.0")]
     public class SpeechController : ControllerBase
     {
