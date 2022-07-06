@@ -16,7 +16,7 @@ namespace TalabatHackathon.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Speech([FromBody] SpeechRequestModel model, CancellationToken cancellationToken)
         {
-            var result = await _speechService.GetSpeech(model.DestinationLanguage, model.Text);
+            var result = await _speechService.GetSpeech(model.Language, model.Text);
             return File(result, "audio/mp3");
         }
     }
