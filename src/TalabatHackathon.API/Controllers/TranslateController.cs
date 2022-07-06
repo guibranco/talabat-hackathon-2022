@@ -28,6 +28,11 @@ namespace TalabatHackathon.API.Controllers
                 ModelState.AddModelError(nameof(model.DestinationLanguage), "Invalid destination language");
             }
 
+            if (model.SourceLanguage == model.DestinationLanguage)
+            {
+                ModelState.AddModelError(nameof(model.DestinationLanguage), "Destination language cannot be the same as Source language");
+            }
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
