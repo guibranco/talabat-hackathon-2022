@@ -17,9 +17,11 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          usedocker: true
           healthcheck: "https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "healthly"
-          dontuseforce: true
-          dontautocreate: true
+          justlogin: true
+      - run: |
+          heroku container:login
+          heroku container:push web -a ${{secrets.HEROKU_APP_NAME}}
+          heroku container:release web -a ${{secrets.HEROKU_APP_NAME}}
 
