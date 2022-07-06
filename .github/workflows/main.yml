@@ -19,11 +19,5 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           healthcheck: "https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/health"
           checkstring: "healthly"
-          justlogin: true
-      - run: |
-          ls -R
-          heroku container:login
-          docker build .
-          heroku container:push web -a ${{secrets.HEROKU_APP_NAME}}
-          heroku container:release web -a ${{secrets.HEROKU_APP_NAME}}
+          docker: true      
 
