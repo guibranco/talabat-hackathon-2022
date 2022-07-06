@@ -16,8 +16,9 @@ builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
 builder.Services.Scan(scan => scan.FromAssemblyOf<Program>());
 
-builder.Services.AddSingleton<ITranslateService, TranslateService>().Decorate<ITranslateService, CacheTranslateService>();
-builder.Services.AddSingleton<ISpeechService, SpeechService>().Decorate<ISpeechService, CacheSpeechService>();
+builder.Services.AddSingleton<ITranslateService, TranslateService>().Decorate<ITranslateService, MemoryCacheTranslateService>();
+builder.Services.AddSingleton<ISpeechService, SpeechService>().Decorate<ISpeechService, MemoryCacheSpeechService>();
+builder.Services.AddSingleton<IAudioFileService, AudioFileService>();
 
 builder.Services.AddHealthChecks();
 builder.Services.AddControllers();

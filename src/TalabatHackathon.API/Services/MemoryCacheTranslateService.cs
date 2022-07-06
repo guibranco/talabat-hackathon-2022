@@ -5,13 +5,13 @@ using System.Text.Unicode;
 
 namespace TalabatHackathon.API.Services
 {
-    public class CacheTranslateService : ITranslateService
+    public class MemoryCacheTranslateService : ITranslateService
     {
         private readonly ITranslateService _translateService;
 
         private readonly ConcurrentDictionary<string, string> _cacheRepository;
 
-        public CacheTranslateService(ITranslateService translateService)
+        public MemoryCacheTranslateService(ITranslateService translateService)
         {
             _translateService = translateService;
             _cacheRepository = new();

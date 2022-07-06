@@ -2,13 +2,13 @@
 
 namespace TalabatHackathon.API.Services;
 
-public class CacheSpeechService : ISpeechService
+public class MemoryCacheSpeechService : ISpeechService
 {
     private readonly ISpeechService _speechService;
 
     private readonly ConcurrentDictionary<string, byte[]> _cacheRepository;
 
-    public CacheSpeechService(ISpeechService speechService)
+    public MemoryCacheSpeechService(ISpeechService speechService)
     {
         _speechService = speechService;
     }

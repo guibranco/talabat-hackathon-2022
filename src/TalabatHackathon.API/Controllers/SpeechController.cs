@@ -10,14 +10,32 @@ namespace TalabatHackathon.API.Controllers
     public class SpeechController : ControllerBase
     {
         private readonly ISpeechService _speechService;
+        private readonly IAudioFileService _audioFileService;
 
-        public SpeechController(ISpeechService speechService) => _speechService = speechService;
+        public SpeechController(ISpeechService speechService, IAudioFileService audioFileService)
+        {
+            _speechService = speechService;
+            _audioFileService = audioFileService;
+        }
 
         [HttpPost]
+        [ProducesResponseType(typeof(SpeechResponseModel), 200)]
         public async Task<IActionResult> Speech([FromBody] SpeechRequestModel model, CancellationToken cancellationToken)
         {
-            var result = await _speechService.GetSpeech(model.Language, model.Text);
-            return File(result, "audio/mp3");
+            var key = $"s_{model.Language}_{model.Text.GetMd5Hash()}.mp3";
+
+            var result = new SpeechResponseModel();
+            result.Language = model.Language;
+            result.Text = model.Text;
+            result.Path = $"https://talabat-hackathon.herokuapp.com/{key}";
+
+            if (!_audioFileService.Exists(key))
+            {
+                var audioResult = await _speechService.GetSpeech(model.Language, model.Text);
+                _audioFileService.Store(key, audioResult);
+            }
+
+            return Ok(result);
         }
     }
 }
