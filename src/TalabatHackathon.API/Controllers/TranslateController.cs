@@ -27,7 +27,7 @@ namespace TalabatHackathon.API.Controllers
             {
                 ModelState.AddModelError(nameof(model.DestinationLanguage), "Invalid destination language");
             }
-            
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -42,7 +42,7 @@ namespace TalabatHackathon.API.Controllers
                 results.Add(text.Key, translation);
             }
 
-           return Ok(new TranslateResponseModel
+            return Ok(new TranslateResponseModel
             {
                 Language = model.DestinationLanguage,
                 Texts = results

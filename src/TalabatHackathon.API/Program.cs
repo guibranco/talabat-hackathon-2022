@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Build.Framework;
 using TalabatHackathon.API.Services;
+using Scrutor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,9 @@ var configurationBuilder = new ConfigurationBuilder()
 
 builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
-builder.Services.AddScoped<ITranslateService, TranslateService>();
+builder.Services.Scan(scan => scan.FromAssemblyOf<Program>());
+builder.Services.AddSingleton<ITranslateService, TranslateService>();
+builder.Services.Decorate<ITranslateService, CacheTranslateService>();
 
 builder.Services.AddHealthChecks();
 builder.Services.AddControllers();
