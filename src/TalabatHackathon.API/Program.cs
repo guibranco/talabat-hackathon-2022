@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TalabatHackathon.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,9 +7,12 @@ var configurationBuilder = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+    .AddUserSecrets<Program>()
     .AddEnvironmentVariables();
 
 builder.Configuration.AddConfiguration(configurationBuilder.Build());
+
+builder.Services.AddScoped<ITranslateService, TranslateService>();
 
 builder.Services.AddHealthChecks();
 builder.Services.AddControllers();
@@ -16,7 +20,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApiVersioning(o =>
 {
     o.AssumeDefaultVersionWhenUnspecified = true;
-    o.DefaultApiVersion = new ApiVersion(1, 0);
+    o.DefaultApiVersion = new(1, 0);
     o.ReportApiVersions = true;
 });
 builder.Services.AddVersionedApiExplorer(
