@@ -10,6 +10,7 @@ var configurationBuilder = new ConfigurationBuilder()
 
 builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
+builder.Services.AddHealthChecks();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApiVersioning(o =>
@@ -35,10 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
+app.MapHealthChecks("/health");
 
 app.Run();
