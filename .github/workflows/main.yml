@@ -22,6 +22,7 @@ jobs:
           justlogin: true
       - run: |
           heroku container:login
+          docker build .
           heroku container:push web -a ${{secrets.HEROKU_APP_NAME}}
           heroku container:release web -a ${{secrets.HEROKU_APP_NAME}}
 
