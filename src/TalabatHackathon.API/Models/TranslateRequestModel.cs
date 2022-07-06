@@ -9,5 +9,5 @@ public class TranslateRequestModel
     [Required]
     public string DestinationLanguage { get; set; }
     [Required]
-    public string Text { get; set; }
+    public Dictionary<string, string> Texts { get; set; }
 }
