@@ -11,11 +11,13 @@ namespace TalabatHackathon.API.Controllers
     {
         private readonly ISpeechService _speechService;
         private readonly IAudioFileService _audioFileService;
+        private readonly string _hostUrl;
 
-        public SpeechController(ISpeechService speechService, IAudioFileService audioFileService)
+        public SpeechController(ISpeechService speechService, IAudioFileService audioFileService, IConfiguration configuration)
         {
             _speechService = speechService;
             _audioFileService = audioFileService;
+            _hostUrl = configuration.GetValue<string>("hostUrl") ?? "https://localhost:7170";
         }
 
         [HttpPost]
@@ -27,12 +29,15 @@ namespace TalabatHackathon.API.Controllers
             var result = new SpeechResponseModel();
             result.Language = model.Language;
             result.Text = model.Text;
-            result.Path = $"https://talabat-hackathon.herokuapp.com/api/v1/audio/{key}";
+            result.Path = $"{_hostUrl}/api/v1/audio/{key}";
+
+            HttpContext.Response.Headers.TryAdd("x-cache", "Hit");
 
             if (!_audioFileService.Exists(key))
             {
                 var audioResult = await _speechService.GetSpeech(model.Language, model.Text);
                 _audioFileService.Store(key, audioResult);
+                HttpContext.Response.Headers.TryAdd("x-cache", "Miss");
             }
 
             return Ok(result);
