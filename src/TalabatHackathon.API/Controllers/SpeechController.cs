@@ -31,13 +31,14 @@ namespace TalabatHackathon.API.Controllers
             result.Text = model.Text;
             result.Path = $"{_hostUrl}/api/v1/audio/{key}";
 
-            HttpContext.Response.Headers.TryAdd("x-cache", "Hit");
+            var exists = _audioFileService.Exists(key);
 
-            if (!_audioFileService.Exists(key))
+            HttpContext.Response.Headers.TryAdd("x-cache", exists ? "Hit" : "Miss");
+
+            if (!exists)
             {
                 var audioResult = await _speechService.GetSpeech(model.Language, model.Text);
                 _audioFileService.Store(key, audioResult);
-                HttpContext.Response.Headers.TryAdd("x-cache", "Miss");
             }
 
             return Ok(result);
