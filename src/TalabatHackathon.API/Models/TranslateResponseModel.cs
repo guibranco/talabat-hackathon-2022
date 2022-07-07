@@ -3,5 +3,5 @@
 public class TranslateResponseModel
 {
     public string Language { get; set; }
-    public Dictionary<string, string> Texts { get; set; }
+    public string[] Texts { get; set; }
 }

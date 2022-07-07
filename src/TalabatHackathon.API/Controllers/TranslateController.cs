@@ -38,19 +38,19 @@ namespace TalabatHackathon.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var results = new Dictionary<string, string>();
+            var results = new List<string>();
 
             foreach (var text in model.Texts)
             {
                 var translation =
-                    await _translateService.TranslateAsync(model.SourceLanguage, model.DestinationLanguage, text.Value);
-                results.Add(text.Key, translation);
+                    await _translateService.TranslateAsync(model.SourceLanguage, model.DestinationLanguage, text);
+                results.Add(translation);
             }
 
             return Ok(new TranslateResponseModel
             {
                 Language = model.DestinationLanguage,
-                Texts = results
+                Texts = results.ToArray()
             });
         }
     }
