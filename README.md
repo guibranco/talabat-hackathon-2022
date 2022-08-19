@@ -1,2 +1,2 @@
-# talabat-hackaton-2022
-The Talabat Hackaton 2022 API project
+# talabat-hackathon-2022
+The Talabat Hackathon 2022 API project
