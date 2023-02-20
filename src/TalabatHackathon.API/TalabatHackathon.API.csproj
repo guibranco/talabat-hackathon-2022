@@ -15,7 +15,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.7.104.2" />
     <PackageReference Include="AWSSDK.Polly" Version="3.7.106.5" />
-    <PackageReference Include="AWSSDK.Translate" Version="3.7.101.30" />
+    <PackageReference Include="AWSSDK.Translate" Version="3.7.101.40" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
