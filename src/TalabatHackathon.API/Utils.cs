@@ -28,9 +28,7 @@ public static class Utils
     /// <returns>System.String.</returns>
     public static string GetMd5Hash(this string input)
     {
-        var algorithm = MD5.Create();
-
-        var hash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+        var hash = MD5.HashData(Encoding.UTF8.GetBytes(input));
 
         var result = new StringBuilder();
 
