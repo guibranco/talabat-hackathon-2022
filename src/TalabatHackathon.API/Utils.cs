@@ -7,7 +7,7 @@ public static class Utils
 {
     public static string GetMd5Hash(this string input)
     {
-        var algorithm = new MD5CryptoServiceProvider();
+        var algorithm = MD5.Create();
 
         var hash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
 
