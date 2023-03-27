@@ -72,22 +72,31 @@ public class SpeechController : ControllerBase
         CancellationToken cancellationToken
     )
     {
-        var key = $"s_{model.Language}_{model.Text.GetMd5Hash()}.mp3";
+        var hash = model.Text.GetMd5Hash();
+        var language = Constants.TranslateLanguages.Values.Any(model.Language)
+            ? model.Language
+            : "en";
 
-        var result = new SpeechResponseModel();
-        result.Language = model.Language;
-        result.Text = model.Text;
-        result.Path = $"{_hostUrl}/api/v1/audio/{key}";
+        var key = $"s_{language}_{hash}.mp3";
+
+        var result = new SpeechResponseModel
+        {
+            Language = language,
+            Text = model.Text,
+            Path = $"{_hostUrl}/api/v1/audio/{key}"
+        };
 
         var exists = _audioFileService.Exists(key);
 
         HttpContext.Response.Headers.TryAdd("x-cache", exists ? "Hit" : "Miss");
 
-        if (!exists)
+        if (exists)
         {
-            var audioResult = await _speechService.GetSpeech(model.Language, model.Text);
-            _audioFileService.Store(key, audioResult);
+            return Ok(result);
         }
+
+        var audioResult = await _speechService.GetSpeech(language, model.Text);
+        _audioFileService.Store(key, audioResult);
 
         return Ok(result);
     }

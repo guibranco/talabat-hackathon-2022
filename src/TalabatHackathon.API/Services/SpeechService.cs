@@ -50,11 +50,13 @@ public class SpeechService : ISpeechService
     /// <returns>Task&lt;System.Byte[]&gt;.</returns>
     public async Task<byte[]> GetSpeech(string language, string text)
     {
-        var request = new SynthesizeSpeechRequest();
-        request.Text = text;
-        request.LanguageCode = language;
-        request.OutputFormat = OutputFormat.Mp3;
-        request.VoiceId = VoiceId.Amy;
+        var request = new SynthesizeSpeechRequest
+        {
+            Text = text,
+            LanguageCode = language,
+            OutputFormat = OutputFormat.Mp3,
+            VoiceId = VoiceId.Amy
+        };
 
         var response = await _pollyClient.SynthesizeSpeechAsync(request);
 
