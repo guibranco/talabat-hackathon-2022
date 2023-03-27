@@ -46,7 +46,7 @@ public class AudioFileController : ControllerBase
     [HttpGet("{path}")]
     public IActionResult GetAudio([FromRoute] string path)
     {
-        if (_audioFileService.Exists(path))
+        if (path.StartsWith("s_") && path.EndsWith(".mp3") && _audioFileService.Exists(path))
         {
             return File(_audioFileService.Retrieve(path), "audio/mp3");
         }

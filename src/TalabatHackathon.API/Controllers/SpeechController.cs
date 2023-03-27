@@ -73,7 +73,7 @@ public class SpeechController : ControllerBase
     )
     {
         var hash = model.Text.GetMd5Hash();
-        var language = Constants.TranslateLanguages.Values.Any(model.Language)
+        var language = Constants.TranslateLanguages.Values.Any(l => l == model.Language)
             ? model.Language
             : "en";
 

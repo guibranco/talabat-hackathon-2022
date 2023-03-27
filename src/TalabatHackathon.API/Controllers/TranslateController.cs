@@ -41,13 +41,13 @@ public class TranslateController : ControllerBase
         _translateService = translateService;
 
     /// <summary>
-    /// Translante as an asynchronous operation.
+    /// Translate as an asynchronous operation.
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns>A Task&lt;IActionResult&gt; representing the asynchronous operation.</returns>
     [HttpPost]
     [ProducesResponseType(typeof(TranslateResponseModel), 200)]
-    public async Task<IActionResult> TranslanteAsync([FromBody] TranslateRequestModel model)
+    public async Task<IActionResult> TranslateAsync([FromBody] TranslateRequestModel model)
     {
         if (Constants.TranslateLanguages.All(x => x.Value != model.SourceLanguage))
         {
