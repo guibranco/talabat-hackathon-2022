@@ -51,7 +51,10 @@ public class AudioFileService : IAudioFileService
     /// <param name="bytes">The bytes.</param>
     public void Store(string key, byte[] bytes)
     {
-        File.WriteAllBytes(Path.Combine(_cachePath, key), bytes);
+        if (key.StartsWith("s_") && key.EndsWith(".mp3"))
+        {
+            File.WriteAllBytes(Path.Combine(_cachePath, key), bytes);
+        }
     }
 
     /// <summary>
@@ -61,6 +64,11 @@ public class AudioFileService : IAudioFileService
     /// <returns>System.Byte[].</returns>
     public byte[] Retrieve(string key)
     {
-        return File.ReadAllBytes(Path.Combine(_cachePath, key));
+        if (key.StartsWith("s_") && key.EndsWith(".mp3"))
+        {
+            return File.ReadAllBytes(Path.Combine(_cachePath, key));
+        }
+
+        return Array.Empty<byte>();
     }
 }
