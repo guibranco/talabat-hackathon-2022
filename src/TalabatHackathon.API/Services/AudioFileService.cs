@@ -6,7 +6,7 @@ public class AudioFileService : IAudioFileService
 
     public AudioFileService()
     {
-        if(!Directory.Exists(CachePath))
+        if (!Directory.Exists(CachePath))
             Directory.CreateDirectory(CachePath);
     }
 

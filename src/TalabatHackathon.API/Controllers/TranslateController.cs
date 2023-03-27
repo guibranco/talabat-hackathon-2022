@@ -12,7 +12,8 @@ namespace TalabatHackathon.API.Controllers
     {
         private readonly ITranslateService _translateService;
 
-        public TranslateController(ITranslateService translateService) => _translateService = translateService;
+        public TranslateController(ITranslateService translateService) =>
+            _translateService = translateService;
 
         [HttpPost]
         [ProducesResponseType(typeof(TranslateResponseModel), 200)]
@@ -25,12 +26,18 @@ namespace TalabatHackathon.API.Controllers
 
             if (Constants.TranslateLanguages.All(x => x.Value != model.DestinationLanguage))
             {
-                ModelState.AddModelError(nameof(model.DestinationLanguage), "Invalid destination language");
+                ModelState.AddModelError(
+                    nameof(model.DestinationLanguage),
+                    "Invalid destination language"
+                );
             }
 
             if (model.SourceLanguage == model.DestinationLanguage)
             {
-                ModelState.AddModelError(nameof(model.DestinationLanguage), "Destination language cannot be the same as Source language");
+                ModelState.AddModelError(
+                    nameof(model.DestinationLanguage),
+                    "Destination language cannot be the same as Source language"
+                );
             }
 
             if (!ModelState.IsValid)
@@ -42,16 +49,21 @@ namespace TalabatHackathon.API.Controllers
 
             foreach (var text in model.Texts)
             {
-                var translation =
-                    await _translateService.TranslateAsync(model.SourceLanguage, model.DestinationLanguage, text);
+                var translation = await _translateService.TranslateAsync(
+                    model.SourceLanguage,
+                    model.DestinationLanguage,
+                    text
+                );
                 results.Add(translation);
             }
 
-            return Ok(new TranslateResponseModel
-            {
-                Language = model.DestinationLanguage,
-                Texts = results.ToArray()
-            });
+            return Ok(
+                new TranslateResponseModel
+                {
+                    Language = model.DestinationLanguage,
+                    Texts = results.ToArray()
+                }
+            );
         }
     }
 }

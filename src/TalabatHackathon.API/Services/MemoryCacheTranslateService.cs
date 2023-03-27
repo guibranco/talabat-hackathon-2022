@@ -17,11 +17,18 @@ namespace TalabatHackathon.API.Services
             _cacheRepository = new();
         }
 
-        public Task<string> TranslateAsync(string sourceLanguage, string targetLanguage, string text)
+        public Task<string> TranslateAsync(
+            string sourceLanguage,
+            string targetLanguage,
+            string text
+        )
         {
             var textMd5 = text.GetMd5Hash();
             var key = $"t_{sourceLanguage}_{targetLanguage}_{textMd5}";
-            var value = _cacheRepository.GetOrAdd(key, (_) => _translateService.TranslateAsync(sourceLanguage, targetLanguage, text).Result);
+            var value = _cacheRepository.GetOrAdd(
+                key,
+                (_) => _translateService.TranslateAsync(sourceLanguage, targetLanguage, text).Result
+            );
 
             return Task.FromResult(value);
         }

@@ -10,7 +10,8 @@ namespace TalabatHackathon.API.Controllers
     {
         private readonly IAudioFileService _audioFileService;
 
-        public AudioFileController(IAudioFileService audioFileService) => _audioFileService = audioFileService; 
+        public AudioFileController(IAudioFileService audioFileService) =>
+            _audioFileService = audioFileService;
 
         [HttpGet("{path}")]
         public IActionResult GetAudio([FromRoute] string path)

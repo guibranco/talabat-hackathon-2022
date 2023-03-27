@@ -13,10 +13,15 @@ namespace TalabatHackathon.API.Services
             _translateClient = new(
                 configuration.GetValue<string>("AWS_ACCESS_KEY_ID"),
                 configuration.GetValue<string>("AWS_SECRET_ACCESS_KEY"),
-                RegionEndpoint.USEast1);
+                RegionEndpoint.USEast1
+            );
         }
 
-        public async Task<string> TranslateAsync(string sourceLanguage, string targetLanguage, string text)
+        public async Task<string> TranslateAsync(
+            string sourceLanguage,
+            string targetLanguage,
+            string text
+        )
         {
             var request = new TranslateTextRequest
             {

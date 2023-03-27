@@ -13,7 +13,11 @@ namespace TalabatHackathon.API.Controllers
         private readonly IAudioFileService _audioFileService;
         private readonly string _hostUrl;
 
-        public SpeechController(ISpeechService speechService, IAudioFileService audioFileService, IConfiguration configuration)
+        public SpeechController(
+            ISpeechService speechService,
+            IAudioFileService audioFileService,
+            IConfiguration configuration
+        )
         {
             _speechService = speechService;
             _audioFileService = audioFileService;
@@ -22,7 +26,10 @@ namespace TalabatHackathon.API.Controllers
 
         [HttpPost]
         [ProducesResponseType(typeof(SpeechResponseModel), 200)]
-        public async Task<IActionResult> Speech([FromBody] SpeechRequestModel model, CancellationToken cancellationToken)
+        public async Task<IActionResult> Speech(
+            [FromBody] SpeechRequestModel model,
+            CancellationToken cancellationToken
+        )
         {
             var key = $"s_{model.Language}_{model.Text.GetMd5Hash()}.mp3";
 

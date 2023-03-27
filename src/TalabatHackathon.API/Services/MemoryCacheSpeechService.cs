@@ -18,7 +18,10 @@ public class MemoryCacheSpeechService : ISpeechService
     {
         var textMd5 = text.GetMd5Hash();
         var key = $"s_{language}_{textMd5}";
-        var value = _cacheRepository.GetOrAdd(key, (_) => _speechService.GetSpeech(language, text).Result);
+        var value = _cacheRepository.GetOrAdd(
+            key,
+            (_) => _speechService.GetSpeech(language, text).Result
+        );
 
         return Task.FromResult(value);
     }
