@@ -14,7 +14,7 @@
     <NoWarn>NU5105</NoWarn>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-    <RootNamespace>TalabatHackathon</RootNamespace>
+    <RootNamespace>TalabatHackathon.API</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 

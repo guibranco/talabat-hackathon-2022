@@ -11,6 +11,9 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
+using System.Collections.Immutable;
+
 namespace TalabatHackathon.API.Models;
 
 /// <summary>
@@ -28,5 +31,5 @@ public class SettingsResponseModel
     /// Gets or sets the translate iso pairs.
     /// </summary>
     /// <value>The translate iso pairs.</value>
-    public Dictionary<string, string> TranslateIsoPairs { get; set; }
+    public ImmutableDictionary<string, string> TranslateIsoPairs { get; set; }
 }

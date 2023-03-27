@@ -33,7 +33,7 @@ public class MemoryCacheSpeechService : ISpeechService
     private readonly ConcurrentDictionary<string, byte[]> _cacheRepository;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="MemoryCacheSpeechService"/> class.
+    /// Initializes a new instance of the <see cref="MemoryCacheSpeechService" /> class.
     /// </summary>
     /// <param name="speechService">The speech service.</param>
     public MemoryCacheSpeechService(ISpeechService speechService)

@@ -23,15 +23,15 @@ public class AudioFileService : IAudioFileService
     /// <summary>
     /// The cache path
     /// </summary>
-    private const string CachePath = "cached_audios";
+    private const string _cachePath = "cached_audios";
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="AudioFileService"/> class.
+    /// Initializes a new instance of the <see cref="AudioFileService" /> class.
     /// </summary>
     public AudioFileService()
     {
-        if (!Directory.Exists(CachePath))
-            Directory.CreateDirectory(CachePath);
+        if (!Directory.Exists(_cachePath))
+            Directory.CreateDirectory(_cachePath);
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public class AudioFileService : IAudioFileService
     /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
     public bool Exists(string key)
     {
-        return File.Exists(Path.Combine(CachePath, key));
+        return File.Exists(Path.Combine(_cachePath, key));
     }
 
     /// <summary>
@@ -51,7 +51,7 @@ public class AudioFileService : IAudioFileService
     /// <param name="bytes">The bytes.</param>
     public void Store(string key, byte[] bytes)
     {
-        File.WriteAllBytes(Path.Combine(CachePath, key), bytes);
+        File.WriteAllBytes(Path.Combine(_cachePath, key), bytes);
     }
 
     /// <summary>
@@ -61,6 +61,6 @@ public class AudioFileService : IAudioFileService
     /// <returns>System.Byte[].</returns>
     public byte[] Retrieve(string key)
     {
-        return File.ReadAllBytes(Path.Combine(CachePath, key));
+        return File.ReadAllBytes(Path.Combine(_cachePath, key));
     }
 }

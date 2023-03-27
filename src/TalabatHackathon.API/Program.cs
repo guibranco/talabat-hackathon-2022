@@ -11,10 +11,8 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Build.Framework;
+
 using TalabatHackathon.API.Services;
-using Scrutor;
 
 var builder = WebApplication.CreateBuilder(args);
 

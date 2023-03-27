@@ -14,33 +14,32 @@
 using Microsoft.AspNetCore.Mvc;
 using TalabatHackathon.API.Models;
 
-namespace TalabatHackathon.API.Controllers
+namespace TalabatHackathon.API.Controllers;
+
+/// <summary>
+/// Class SettingsController.
+/// Implements the <see cref="ControllerBase" />
+/// </summary>
+/// <seealso cref="ControllerBase" />
+[ApiController]
+[Route("api/v{version:apiVersion}/settings")]
+[ApiVersion("1.0")]
+public class SettingsController : ControllerBase
 {
     /// <summary>
-    /// Class SettingsController.
-    /// Implements the <see cref="ControllerBase" />
+    /// Gets the settings.
     /// </summary>
-    /// <seealso cref="ControllerBase" />
-    [ApiController]
-    [Route("api/v{version:apiVersion}/settings")]
-    [ApiVersion("1.0")]
-    public class SettingsController : ControllerBase
+    /// <returns>IActionResult.</returns>
+    [HttpGet]
+    [ProducesResponseType(typeof(SettingsResponseModel), 200)]
+    public IActionResult GetSettings()
     {
-        /// <summary>
-        /// Gets the settings.
-        /// </summary>
-        /// <returns>IActionResult.</returns>
-        [HttpGet]
-        [ProducesResponseType(typeof(SettingsResponseModel), 200)]
-        public IActionResult GetSettings()
+        var response = new SettingsResponseModel
         {
-            var response = new SettingsResponseModel
-            {
-                TranslateIsoCodes = Constants.TranslateLanguages.Select(l => l.Value).ToArray(),
-                TranslateIsoPairs = Constants.TranslateLanguages
-            };
+            TranslateIsoCodes = Constants.TranslateLanguages.Select(l => l.Value).ToArray(),
+            TranslateIsoPairs = Constants.TranslateLanguages
+        };
 
-            return Ok(response);
-        }
+        return Ok(response);
     }
 }
