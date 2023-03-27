@@ -56,5 +56,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"guibranco_talabat-hackathon-2022" /o:"guibranco-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build TalabatHackaton.sln /p:Configuration=Release
+          dotnet build TalabatHackathon.sln /p:Configuration=Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
