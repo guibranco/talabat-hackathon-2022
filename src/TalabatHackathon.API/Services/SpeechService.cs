@@ -1,7 +1,6 @@
 ﻿using Amazon;
 using Amazon.Polly;
 using Amazon.Polly.Model;
-using MessagePack.Formatters;
 
 namespace TalabatHackathon.API.Services
 {
