@@ -1,3 +1,16 @@
+// ***********************************************************************
+// Assembly         : TalabatHackathon.API
+// Author           : Guilherme Branco Stracini
+// Created          : 27/03/2023
+//
+// Last Modified By : Guilherme Branco Stracini
+// Last Modified On : 27/03/2023
+// ***********************************************************************
+// <copyright file="Program.cs" company="Guilherme Branco Stracini ME">
+//     Copyright © 2023
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using TalabatHackathon.API.Services;

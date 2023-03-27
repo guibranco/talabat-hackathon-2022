@@ -1,7 +1,26 @@
-﻿namespace TalabatHackathon.API
+﻿// ***********************************************************************
+// Assembly         : TalabatHackathon.API
+// Author           : Guilherme Branco Stracini
+// Created          : 27/03/2023
+//
+// Last Modified By : Guilherme Branco Stracini
+// Last Modified On : 27/03/2023
+// ***********************************************************************
+// <copyright file="Constants.cs" company="Guilherme Branco Stracini ME">
+//     Copyright © 2023
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+namespace TalabatHackathon.API
 {
+    /// <summary>
+    /// Class Constants.
+    /// </summary>
     public static class Constants
     {
+        /// <summary>
+        /// The translate languages
+        /// </summary>
         public static Dictionary<string, string> TranslateLanguages =
             new()
             {
