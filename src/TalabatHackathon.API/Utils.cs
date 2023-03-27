@@ -1,15 +1,34 @@
-﻿using System.Security.Cryptography;
+﻿// ***********************************************************************
+// Assembly         : TalabatHackathon.API
+// Author           : Guilherme Branco Stracini
+// Created          : 27/03/2023
+//
+// Last Modified By : Guilherme Branco Stracini
+// Last Modified On : 27/03/2023
+// ***********************************************************************
+// <copyright file="Utils.cs" company="Guilherme Branco Stracini ME">
+//     Copyright © 2023
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Security.Cryptography;
 using System.Text;
 
 namespace TalabatHackathon.API;
 
+/// <summary>
+/// Class Utils.
+/// </summary>
 public static class Utils
 {
+    /// <summary>
+    /// Gets the MD5 hash.
+    /// </summary>
+    /// <param name="input">The input.</param>
+    /// <returns>System.String.</returns>
     public static string GetMd5Hash(this string input)
     {
-        var algorithm = new MD5CryptoServiceProvider();
-
-        var hash = algorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+        var hash = MD5.HashData(Encoding.UTF8.GetBytes(input));
 
         var result = new StringBuilder();
 
@@ -21,6 +40,11 @@ public static class Utils
         return result.ToString();
     }
 
+    /// <summary>
+    /// Reads the fully.
+    /// </summary>
+    /// <param name="input">The input.</param>
+    /// <returns>System.Byte[].</returns>
     public static byte[] ReadFully(this Stream input)
     {
         var buffer = new byte[16 * 1024];

@@ -1,7 +1,18 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Build.Framework;
+// ***********************************************************************
+// Assembly         : TalabatHackathon.API
+// Author           : Guilherme Branco Stracini
+// Created          : 27/03/2023
+//
+// Last Modified By : Guilherme Branco Stracini
+// Last Modified On : 27/03/2023
+// ***********************************************************************
+// <copyright file="Program.cs" company="Guilherme Branco Stracini ME">
+//     Copyright © 2023
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+
 using TalabatHackathon.API.Services;
-using Scrutor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +27,12 @@ builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
 builder.Services.Scan(scan => scan.FromAssemblyOf<Program>());
 
-builder.Services.AddSingleton<ITranslateService, TranslateService>().Decorate<ITranslateService, MemoryCacheTranslateService>();
-builder.Services.AddSingleton<ISpeechService, SpeechService>().Decorate<ISpeechService, MemoryCacheSpeechService>();
+builder.Services
+    .AddSingleton<ITranslateService, TranslateService>()
+    .Decorate<ITranslateService, MemoryCacheTranslateService>();
+builder.Services
+    .AddSingleton<ISpeechService, SpeechService>()
+    .Decorate<ISpeechService, MemoryCacheSpeechService>();
 builder.Services.AddSingleton<IAudioFileService, AudioFileService>();
 
 builder.Services.AddHealthChecks();
@@ -29,12 +44,11 @@ builder.Services.AddApiVersioning(o =>
     o.DefaultApiVersion = new(1, 0);
     o.ReportApiVersions = true;
 });
-builder.Services.AddVersionedApiExplorer(
-    options =>
-    {
-        options.GroupNameFormat = "'v'VVV";
-        options.SubstituteApiVersionInUrl = true;
-    });
+builder.Services.AddVersionedApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
 
 var app = builder.Build();
 
