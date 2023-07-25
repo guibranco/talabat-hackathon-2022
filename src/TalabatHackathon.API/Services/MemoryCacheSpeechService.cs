@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.Collections.Concurrent;
 
 namespace TalabatHackathon.API.Services;
@@ -54,7 +55,7 @@ public class MemoryCacheSpeechService : ISpeechService
         var key = $"s_{language}_{textMd5}";
         var value = _cacheRepository.GetOrAdd(
             key,
-            (_) => _speechService.GetSpeech(language, text).Result
+            _ => _speechService.GetSpeech(language, text).Result
         );
 
         return Task.FromResult(value);

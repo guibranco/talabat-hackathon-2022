@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.ComponentModel.DataAnnotations;
 
 namespace TalabatHackathon.API.Models;

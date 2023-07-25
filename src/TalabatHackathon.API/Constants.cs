@@ -27,7 +27,7 @@ public static class Constants
     public static readonly ImmutableDictionary<string, string> TranslateLanguages = new Dictionary<
         string,
         string
-    >()
+    >
     {
         { "Afrikaans", "af" },
         { "Albanian", "sq" },

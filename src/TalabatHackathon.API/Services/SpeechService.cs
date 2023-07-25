@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using Amazon;
 using Amazon.Polly;
 using Amazon.Polly.Model;

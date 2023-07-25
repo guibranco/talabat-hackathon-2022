@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.Collections.Concurrent;
 
 namespace TalabatHackathon.API.Services;
@@ -55,7 +56,7 @@ public class MemoryCacheTranslateService : ITranslateService
         var key = $"t_{sourceLanguage}_{targetLanguage}_{textMd5}";
         var value = _cacheRepository.GetOrAdd(
             key,
-            (_) => _translateService.TranslateAsync(sourceLanguage, targetLanguage, text).Result
+            _ => _translateService.TranslateAsync(sourceLanguage, targetLanguage, text).Result
         );
 
         return Task.FromResult(value);

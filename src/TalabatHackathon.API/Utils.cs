@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 using System.Security.Cryptography;
 using System.Text;
 
@@ -54,6 +55,7 @@ public static class Utils
         {
             ms.Write(buffer, 0, read);
         }
+
         return ms.ToArray();
     }
 }
