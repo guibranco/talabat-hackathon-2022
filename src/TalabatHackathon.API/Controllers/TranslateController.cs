@@ -11,12 +11,12 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-using TalabatHackathon.API.Services;
-
-namespace TalabatHackathon.API.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
 using TalabatHackathon.API.Models;
+using TalabatHackathon.API.Services;
+
+namespace TalabatHackathon.API.Controllers;
 
 /// <summary>
 /// Class TranslateController.

@@ -11,6 +11,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
+
 namespace TalabatHackathon.API.Services;
 
 /// <summary>
@@ -23,15 +24,15 @@ public class AudioFileService : IAudioFileService
     /// <summary>
     /// The cache path
     /// </summary>
-    private const string _cachePath = "cached_audios";
+    private const string CachePath = "cached_audios";
 
     /// <summary>
     /// Initializes a new instance of the <see cref="AudioFileService" /> class.
     /// </summary>
     public AudioFileService()
     {
-        if (!Directory.Exists(_cachePath))
-            Directory.CreateDirectory(_cachePath);
+        if (!Directory.Exists(CachePath))
+            Directory.CreateDirectory(CachePath);
     }
 
     /// <summary>
@@ -41,7 +42,7 @@ public class AudioFileService : IAudioFileService
     /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
     public bool Exists(string key)
     {
-        return File.Exists(Path.Combine(_cachePath, key));
+        return File.Exists(Path.Combine(CachePath, key));
     }
 
     /// <summary>
@@ -53,7 +54,7 @@ public class AudioFileService : IAudioFileService
     {
         if (key.StartsWith("s_") && key.EndsWith(".mp3"))
         {
-            File.WriteAllBytes(Path.Combine(_cachePath, key), bytes);
+            File.WriteAllBytes(Path.Combine(CachePath, key), bytes);
         }
     }
 
@@ -66,7 +67,7 @@ public class AudioFileService : IAudioFileService
     {
         if (key.StartsWith("s_") && key.EndsWith(".mp3"))
         {
-            return File.ReadAllBytes(Path.Combine(_cachePath, key));
+            return File.ReadAllBytes(Path.Combine(CachePath, key));
         }
 
         return Array.Empty<byte>();
