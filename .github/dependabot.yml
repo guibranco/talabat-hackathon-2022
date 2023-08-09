@@ -30,7 +30,7 @@ updates:
     - ".NET"
     - "dependencies"
   groups:
-    dev-dependencies:
+    AWS:
       patterns:
         - "aws*"
 
