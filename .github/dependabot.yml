@@ -29,6 +29,10 @@ updates:
     - "packages"
     - ".NET"
     - "dependencies"
+  groups:
+    dev-dependencies:
+      patterns:
+        - "aws*"
 
 - package-ecosystem: "github-actions"
   directory: "/"
