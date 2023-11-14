@@ -27,10 +27,12 @@ builder.Configuration.AddConfiguration(configurationBuilder.Build());
 
 builder.Services.Scan(scan => scan.FromAssemblyOf<Program>());
 
-builder.Services
+builder
+    .Services
     .AddSingleton<ITranslateService, TranslateService>()
     .Decorate<ITranslateService, MemoryCacheTranslateService>();
-builder.Services
+builder
+    .Services
     .AddSingleton<ISpeechService, SpeechService>()
     .Decorate<ISpeechService, MemoryCacheSpeechService>();
 builder.Services.AddSingleton<IAudioFileService, AudioFileService>();
@@ -38,17 +40,21 @@ builder.Services.AddSingleton<IAudioFileService, AudioFileService>();
 builder.Services.AddHealthChecks();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
-builder.Services.AddApiVersioning(o =>
-{
-    o.AssumeDefaultVersionWhenUnspecified = true;
-    o.DefaultApiVersion = new(1, 0);
-    o.ReportApiVersions = true;
-});
-builder.Services.AddVersionedApiExplorer(options =>
-{
-    options.GroupNameFormat = "'v'VVV";
-    options.SubstituteApiVersionInUrl = true;
-});
+builder
+    .Services
+    .AddApiVersioning(o =>
+    {
+        o.AssumeDefaultVersionWhenUnspecified = true;
+        o.DefaultApiVersion = new(1, 0);
+        o.ReportApiVersions = true;
+    });
+builder
+    .Services
+    .AddVersionedApiExplorer(options =>
+    {
+        options.GroupNameFormat = "'v'VVV";
+        options.SubstituteApiVersionInUrl = true;
+    });
 
 var app = builder.Build();
 
