@@ -20,11 +20,11 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="'$(GITHUB_ACTIONS)' == 'true'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" Condition="'$(GITHUB_ACTIONS)' == 'true'" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSharpier.MSBuild" Version="0.25.0">
+    <PackageReference Include="CSharpier.MSBuild" Version="0.26.2">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
