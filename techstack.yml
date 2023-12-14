@@ -1,11 +1,11 @@
 repo_name: guibranco/talabat-hackathon-2022
-report_id: 6a256cc3dcd295b7747e13845e512e98
+report_id: bd506a5f9938ff0a64fb1e8d0b463759
 repo_type: Public
-timestamp: '2023-11-09T15:56:24+00:00'
+timestamp: '2023-12-14T09:37:54+00:00'
 requested_by: dependabot[bot]
 provider: github
 branch: main
-detected_tools_count: 10
+detected_tools_count: 6
 tools:
 - name: C#
   description: Simple, general-purpose, object-oriented programming language for the
@@ -17,49 +17,6 @@ tools:
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1015/1200px-C_Sharp_wordmark.svg.png
   detection_source: Repo Metadata
-- name: ".NET"
-  description: A free, cross-platform, open source developer platform for building
-    many different types of applications
-  website_url: http://www.microsoft.com/net/
-  license: MIT
-  open_source: true
-  hosted_saas: false
-  category: Languages & Frameworks
-  sub_category: Frameworks (Full Stack)
-  image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
-  detection_source: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  last_updated_by: Guilherme Branco Stracini
-  last_updated_on: 2022-07-05 12:50:44.000000000 Z
-- name: ".NET Core"
-  description: An Open Source, General-Purpose Development Platform Maintained by
-    Microsoft and the .NET Community
-  website_url: https://docs.microsoft.com/en-us/dotnet/core/
-  version: '7.0'
-  license: MIT
-  open_source: true
-  hosted_saas: false
-  category: Languages & Frameworks
-  sub_category: Frameworks (Full Stack)
-  image_url: https://img.stackshare.io/service/6403/default_91fc1f0ee315262794273aa1387eaf8fed8436e6.png
-  detection_source_url: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  detection_source: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 13:30:36.000000000 Z
-- name: ASP.NET Core
-  description: A cross-platform .NET framework for building modern cloud-based web
-    applications on Windows, Mac, or Linux
-  website_url: docs.microsoft.com/en-us/aspnet/core/
-  version: '7.0'
-  license: MIT
-  open_source: true
-  hosted_saas: false
-  category: Languages & Frameworks
-  sub_category: Frameworks (Full Stack)
-  image_url: https://img.stackshare.io/service/11331/asp.net-core.png
-  detection_source_url: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  detection_source: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  last_updated_by: dependabot[bot]
-  last_updated_on: 2023-11-06 13:30:36.000000000 Z
 - name: Docker
   description: Enterprise Container Platform for High-Velocity Innovation.
   website_url: https://www.docker.com/
@@ -87,20 +44,9 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source: ".github/workflows/sonarcloud.yml"
+  detection_source: ".github/workflows/build.yml"
   last_updated_by: dependabot[bot]
-  last_updated_on: 2023-09-13 09:03:00.000000000 Z
-- name: NuGet
-  description: The package manager for .NET
-  website_url: https://www.nuget.org/
-  open_source: false
-  hosted_saas: false
-  category: Build, Test, Deploy
-  sub_category: Package Managers
-  image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
-  detection_source: src/TalabatHackathon.API/TalabatHackathon.API.csproj
-  last_updated_by: Guilherme Branco Stracini
-  last_updated_on: 2022-07-05 12:50:44.000000000 Z
+  last_updated_on: 2023-12-11 12:37:52.000000000 Z
 - name: Visual Studio
   description: State-of-the-art tools and services that you can use to create great
     apps for devices, the cloud, and everything in between.
