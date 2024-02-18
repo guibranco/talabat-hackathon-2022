@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/guibranco/talabat-hackathon-2022)](https://github.com/guibranco/talabat-hackathon-2022)
 [![wakatime](https://wakatime.com/badge/github/guibranco/talabat-hackathon-2022.svg)](https://wakatime.com/badge/github/guibranco/talabat-hackathon-2022)
 [![Build](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/build.yml/badge.svg)](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/build.yml)
-[![Sonar Cloud Analysis](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/sonarcloud.yml/badge.svg)](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/sonarcloud.yml)
+[![Sonar Cloud Analysis](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/sonar-cloud.yml/badge.svg)](https://github.com/guibranco/talabat-hackathon-2022/actions/workflows/sonar-cloud.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/talabat-hackathon-2022/main)](https://github.com/guibranco/talabat-hackathon-2022)
 
 ## Code Quality
