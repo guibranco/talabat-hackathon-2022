@@ -29,4 +29,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID:  ${{ secrets.CODECLIMATE_TOKEN }}
         with:
-          coverageCommand: dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="cobertura"
+          coverageCommand: dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="lcov"
+          coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
