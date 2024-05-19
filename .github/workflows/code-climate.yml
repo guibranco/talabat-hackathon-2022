@@ -21,10 +21,11 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Build and test
+      - name: Build
         run: |
           dotnet build -c Debug --verbosity minimal
-      - name: Send report
+
+      - name: Test and generate coverage report
         uses: paambaati/codeclimate-action@v6.0.0
         env:
           CC_TEST_REPORTER_ID:  ${{ secrets.CODECLIMATE_TOKEN }}
