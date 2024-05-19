@@ -30,4 +30,4 @@ jobs:
           CC_TEST_REPORTER_ID:  ${{ secrets.CODECLIMATE_TOKEN }}
         with:
           coverageCommand: dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="lcov"
-          coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
+          coverageLocations: ${{github.workspace}}/tests/TalabatHackathon.Tests/coverage.info:lcov
