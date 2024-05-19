@@ -1,0 +1,35 @@
+name: Code Climate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  DeepSource:
+    name: Code Climate Coverage report
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build and test
+        run: |
+          dotnet build -c Debug --verbosity minimal
+          dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="lcov"
+
+      - name: Send report
+        uses: paambaati/codeclimate-action@v2.2.4
+        env:
+          CC_TEST_REPORTER_ID:  ${{ secrets.CODECLIMATE_TOKEN }}
+        with:
+          coverageLocations: |
+            ${{github.workspace}}/*.lcov:lcov
