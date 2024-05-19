@@ -24,12 +24,11 @@ jobs:
       - name: Build and test
         run: |
           dotnet build -c Debug --verbosity minimal
-          dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="lcov"
-
       - name: Send report
         uses: paambaati/codeclimate-action@v6.0.0
         env:
           CC_TEST_REPORTER_ID:  ${{ secrets.CODECLIMATE_TOKEN }}
         with:
+          coverageCommand: dotnet test -c Debug --verbosity minimal --no-build --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat="lcov"
           coverageLocations: |
             ${{github.workspace}}/*.lcov:lcov
