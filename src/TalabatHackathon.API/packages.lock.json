@@ -800,7 +800,7 @@
       },
       "NuGet.Common": {
         "type": "Transitive",
-        "resolved": "6.9.1",
+        "resolved": "6.5.1",
         "contentHash": "FbuWZBjQ1NJXBDqCwSddN2yvw3Plq3sTCIh0nc66Hu8jrNr+BOaxlKZv78jvJ+pSy8BvurYOdF9sl9KoORjrtg==",
         "dependencies": {
           "NuGet.Frameworks": "6.9.1"
@@ -841,7 +841,7 @@
       },
       "NuGet.Packaging": {
         "type": "Transitive",
-        "resolved": "6.9.1",
+        "resolved": "6.8.1",
         "contentHash": "6FyasOxKInCELJ+pGy8f17ub9st6ofFeNcBNTo7CRiPJlxyhJfKGKNpfe3HHYwvnZhc3Vdfr0kSR+f1BVGDuTA==",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -860,7 +860,7 @@
       },
       "NuGet.Protocol": {
         "type": "Transitive",
-        "resolved": "6.9.1",
+        "resolved": "6.5.1",
         "contentHash": "h3bdjqUY4jvwM02D/7QM4FR8x/bbf4Pyjrc1Etw7an2OrWKPUSx0vJPdapKzioxIw7GXl/aVUM/DCeIc3S9brA==",
         "dependencies": {
           "NuGet.Packaging": "6.9.1"
