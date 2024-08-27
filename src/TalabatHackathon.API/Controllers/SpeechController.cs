@@ -61,11 +61,19 @@ public class SpeechController : ControllerBase
     }
 
     /// <summary>
-    /// Speeches the specified model.
+    /// Processes a speech request and generates an audio file if it does not already exist.
     /// </summary>
-    /// <param name="model">The model.</param>
-    /// <param name="cancellationToken">The cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-    /// <returns>IActionResult.</returns>
+    /// <param name="model">The request model containing the text to be converted to speech and the desired language.</param>
+    /// <param name="cancellationToken">A cancellation token to monitor for cancellation requests.</param>
+    /// <returns>An IActionResult containing the response with the audio file path and language information.</returns>
+    /// <remarks>
+    /// This method first computes an MD5 hash of the input text to create a unique key for the audio file.
+    /// It checks if the specified language is supported; if not, it defaults to English.
+    /// The method then checks if an audio file with the generated key already exists.
+    /// If the file exists, it returns a cached response with the audio file path.
+    /// If the file does not exist, it calls a speech service to generate the audio file and stores it for future use.
+    /// The response includes headers indicating whether the audio file was a cache hit or miss.
+    /// </remarks>
     [HttpPost]
     [ProducesResponseType(typeof(SpeechResponseModel), 200)]
     public async Task<IActionResult> Speech(
