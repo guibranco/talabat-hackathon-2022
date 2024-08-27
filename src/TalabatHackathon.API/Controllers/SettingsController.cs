@@ -27,7 +27,6 @@ namespace TalabatHackathon.API.Controllers;
 [ApiVersion("1.0")]
 public class SettingsController : ControllerBase
 {
-
     /// <summary>
     /// Retrieves the application settings and returns them in a response model.
     /// </summary>
