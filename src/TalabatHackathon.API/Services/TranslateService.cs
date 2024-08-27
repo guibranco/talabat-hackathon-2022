@@ -44,12 +44,18 @@ public class TranslateService : ITranslateService
     }
 
     /// <summary>
-    /// Translate as an asynchronous operation.
+    /// Translates the specified text from the source language to the target language asynchronously.
     /// </summary>
-    /// <param name="sourceLanguage">The source language.</param>
-    /// <param name="targetLanguage">The target language.</param>
-    /// <param name="text">The text.</param>
-    /// <returns>A Task&lt;System.String&gt; representing the asynchronous operation.</returns>
+    /// <param name="sourceLanguage">The language code of the source language (e.g., "en" for English).</param>
+    /// <param name="targetLanguage">The language code of the target language (e.g., "es" for Spanish).</param>
+    /// <param name="text">The text to be translated.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains the translated text.</returns>
+    /// <remarks>
+    /// This method constructs a translation request using the provided source and target language codes along with the text to be translated.
+    /// It then sends this request to a translation service client and awaits the response.
+    /// Upon receiving the response, it extracts and returns the translated text.
+    /// This method is designed to be used in an asynchronous programming model, allowing for non-blocking calls.
+    /// </remarks>
     public async Task<string> TranslateAsync(
         string sourceLanguage,
         string targetLanguage,
