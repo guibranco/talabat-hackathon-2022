@@ -60,7 +60,7 @@ public class TranslateService : ITranslateService
         {
             Text = text,
             SourceLanguageCode = sourceLanguage,
-            TargetLanguageCode = targetLanguage
+            TargetLanguageCode = targetLanguage,
         };
 
         var response = await _translateClient.TranslateTextAsync(request);

@@ -84,7 +84,7 @@ public class SpeechController : ControllerBase
         {
             Language = language,
             Text = model.Text,
-            Path = $"{_hostUrl}/api/v1/audio/{key}"
+            Path = $"{_hostUrl}/api/v1/audio/{key}",
         };
 
         var exists = _audioFileService.Exists(key);

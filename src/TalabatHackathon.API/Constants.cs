@@ -103,6 +103,6 @@ public static class Constants
         { "Urdu", "ur" },
         { "Uzbek", "uz" },
         { "Vietnamese", "vi" },
-        { "Welsh", "cy" }
+        { "Welsh", "cy" },
     }.ToImmutableDictionary();
 }
