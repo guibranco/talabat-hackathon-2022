@@ -41,10 +41,18 @@ public class TranslateController : ControllerBase
         _translateService = translateService;
 
     /// <summary>
-    /// Translate as an asynchronous operation.
+    /// Translates a list of texts from a source language to a destination language asynchronously.
     /// </summary>
-    /// <param name="model">The model.</param>
-    /// <returns>A Task&lt;IActionResult&gt; representing the asynchronous operation.</returns>
+    /// <param name="model">The request model containing the source language, destination language, and texts to be translated.</param>
+    /// <returns>An <see cref="IActionResult"/> containing the translation results or a bad request response if the input is invalid.</returns>
+    /// <remarks>
+    /// This method first validates the source and destination languages against a predefined list of supported languages.
+    /// It checks that both languages are valid and that they are not the same. If any validation fails, it adds appropriate errors to the model state.
+    /// If the model state is valid, it proceeds to translate each text in the provided list using an external translation service.
+    /// The translations are collected and returned in a response model that includes the destination language and the translated texts.
+    /// This method is decorated with HTTP POST attributes and produces a response of type <see cref="TranslateResponseModel"/> upon successful translation.
+    /// </remarks>
+    /// <exception cref="ArgumentNullException">Thrown when the <paramref name="model"/> is null.</exception>
     [HttpPost]
     [ProducesResponseType(typeof(TranslateResponseModel), 200)]
     public async Task<IActionResult> TranslateAsync([FromBody] TranslateRequestModel model)
