@@ -44,11 +44,16 @@ public class SpeechService : ISpeechService
     }
 
     /// <summary>
-    /// Gets the speech.
+    /// Asynchronously generates speech from the provided text in the specified language.
     /// </summary>
-    /// <param name="language">The language.</param>
-    /// <param name="text">The text.</param>
-    /// <returns>Task&lt;System.Byte[]&gt;.</returns>
+    /// <param name="language">The language code for the speech synthesis (e.g., "en-US").</param>
+    /// <param name="text">The text to be converted into speech.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains a byte array representing the audio stream of the synthesized speech.</returns>
+    /// <remarks>
+    /// This method creates a speech synthesis request using the Amazon Polly service, specifying the text to be spoken, the desired language, the output format (MP3), and the voice to be used (in this case, "Amy").
+    /// It then sends the request asynchronously and waits for the response. Once the audio stream is received, it reads the stream fully into a byte array, which can be used for playback or storage.
+    /// This method relies on the Amazon Polly client (_pollyClient) to perform the synthesis operation.
+    /// </remarks>
     public async Task<byte[]> GetSpeech(string language, string text)
     {
         var request = new SynthesizeSpeechRequest

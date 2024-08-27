@@ -28,9 +28,16 @@ namespace TalabatHackathon.API.Controllers;
 public class SettingsController : ControllerBase
 {
     /// <summary>
-    /// Gets the settings.
+    /// Retrieves the application settings and returns them in a response model.
     /// </summary>
-    /// <returns>IActionResult.</returns>
+    /// <returns>An <see cref="IActionResult"/> containing the settings response model with translation ISO codes and pairs.</returns>
+    /// <remarks>
+    /// This method handles HTTP GET requests to retrieve the current application settings.
+    /// It constructs a <see cref="SettingsResponseModel"/> that includes:
+    /// - An array of translation ISO codes derived from the available languages.
+    /// - A dictionary of translation ISO pairs for further processing.
+    /// The response is returned with an HTTP status code of 200 (OK) if the operation is successful.
+    /// </remarks>
     [HttpGet]
     [ProducesResponseType(typeof(SettingsResponseModel), 200)]
     public IActionResult GetSettings()
