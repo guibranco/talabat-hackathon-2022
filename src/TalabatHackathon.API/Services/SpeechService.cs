@@ -56,7 +56,7 @@ public class SpeechService : ISpeechService
             Text = text,
             LanguageCode = language,
             OutputFormat = OutputFormat.Mp3,
-            VoiceId = VoiceId.Amy
+            VoiceId = VoiceId.Amy,
         };
 
         var response = await _pollyClient.SynthesizeSpeechAsync(request);

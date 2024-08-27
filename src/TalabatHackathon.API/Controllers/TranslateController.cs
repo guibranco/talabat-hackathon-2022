@@ -91,7 +91,7 @@ public class TranslateController : ControllerBase
             new TranslateResponseModel
             {
                 Language = model.DestinationLanguage,
-                Texts = results.ToArray()
+                Texts = results.ToArray(),
             }
         );
     }

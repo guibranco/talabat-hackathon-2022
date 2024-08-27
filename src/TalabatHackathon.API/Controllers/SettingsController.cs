@@ -38,7 +38,7 @@ public class SettingsController : ControllerBase
         var response = new SettingsResponseModel
         {
             TranslateIsoCodes = Constants.TranslateLanguages.Select(l => l.Value).ToArray(),
-            TranslateIsoPairs = Constants.TranslateLanguages
+            TranslateIsoPairs = Constants.TranslateLanguages,
         };
 
         return Ok(response);
