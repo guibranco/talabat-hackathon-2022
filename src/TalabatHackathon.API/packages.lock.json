@@ -4,33 +4,33 @@
     "net8.0": {
       "AWSSDK.Core": {
         "type": "Direct",
-        "requested": "[3.7.400.47, )",
-        "resolved": "3.7.400.47",
-        "contentHash": "1Twrreb+XofwuK5RfFbhPmiXmzYGmyZSQLPnHErHPSWKjLjOf5hLNOYvSJFa4icK6bWjVSHQspLK2OmBukU6oQ=="
+        "requested": "[3.7.400.53, )",
+        "resolved": "3.7.400.53",
+        "contentHash": "OwJTHfD3tXKLPiB/UUr6SSigFycQm6JNTReh5j2kYJP0CgcZmV+qeePEpIptxCVbq28esef/8hdzezkzNhN+fA=="
       },
       "AWSSDK.Polly": {
         "type": "Direct",
-        "requested": "[3.7.401.36, )",
-        "resolved": "3.7.401.36",
-        "contentHash": "3HqJNfyosnf0PbgJY2HPRMxT5RrvWqtgru5CwumUc4OH4KsCXw2v8WFNBdKHl6DyFPZOqBH0RF0zYONeRl09PA==",
+        "requested": "[3.7.401.42, )",
+        "resolved": "3.7.401.42",
+        "contentHash": "VXeENcVyAKchihEQKGrN6UVO3kd5BjE+77tI1JIJ9PNkGuhljqUD801cTk2Dfl0BlP+5q/OxGP+/6oXcDzlE+g==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.47, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.53, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Direct",
-        "requested": "[3.7.400.47, )",
-        "resolved": "3.7.400.47",
-        "contentHash": "Us4PdjK5gW9Vy7OssTdgU8Q3SvTYApOoqJm1vLJB78l4Kyty1p/8bMD1i4g6UajlwI56bbHsazCo9pkCWhLcwg==",
+        "requested": "[3.7.400.53, )",
+        "resolved": "3.7.400.53",
+        "contentHash": "BGNmRuQV5zyBEZC4cIzwDSiPA3Wi5etCYN8Sh7/OyMiBsnWNIjqijOqff+AyoNRktsZC9reGMkHfnrIr0UgF8A==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.47, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.53, 4.0.0)"
         }
       },
       "CSharpier.MsBuild": {
         "type": "Direct",
-        "requested": "[0.29.2, )",
-        "resolved": "0.29.2",
-        "contentHash": "Pa7xUpo9Z6qWUTk+gAN1sRlEVqG/tgqK6+OvE/JXUfL3m1euNw5/RGj3bdQF/EyagSTyLDpqi0I8xRi1jzGq3A=="
+        "requested": "[0.30.1, )",
+        "resolved": "0.30.1",
+        "contentHash": "Nkqj4DCp1T1mddz192pKJqsqao6/kOeqrmntFSevypfwCrr/hzWNZX+myaOHdP7cJbeFxx5axT+l2qsQlhkCXA=="
       },
       "Microsoft.AspNetCore.Mvc.Versioning": {
         "type": "Direct",
