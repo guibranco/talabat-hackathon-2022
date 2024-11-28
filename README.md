@@ -85,29 +85,40 @@ This **C# project** is a **web REST API** designed to enhance the Talabat app by
 
 ## API Endpoints
 
-### Text-to-Speech
-- **POST** `/api/text-to-speech`
-- **Body**:
-  ```json
-  {
-    "text": "Sample text to convert to speech",
-    "voice": "Preferred AWS Polly voice ID (optional)"
-  }
-  ```
-- **Response**:
-  - A stream of audio data or a URL to download the generated audio file.
+### Available Routes
 
-### Translation
-- **POST** `/api/translate`
-- **Body**:
-  ```json
-  {
-    "text": "Sample text to translate",
-    "targetLanguage": "es"
-  }
-  ```
-- **Response**:
-  - A JSON object containing the translated text.
+#### Audio Retrieval
+- **GET** `api/v{version:apiVersion}/audio/{path}`  
+  Retrieve a generated audio file by specifying the file path.
+
+#### Settings Retrieval
+- **GET** `api/v{version:apiVersion}/settings`  
+  Retrieve the current settings, including available languages with their `TranslateIsoCodes` and `TranslateIsoPairs`.
+
+#### Text-to-Speech
+- **POST** `api/v{version:apiVersion}/speech`  
+  Generate an audio file of the input text in the selected language.  
+  - **Body**:
+    ```json
+    {
+      "text": "Sample text to convert to speech",
+      "language": "en"
+    }
+    ```
+  - **Response**: A URL or file stream of the generated audio.
+
+#### Translation
+- **POST** `api/v{version:apiVersion}/translate`  
+  Translate the input text from one language to another.  
+  - **Body**:
+    ```json
+    {
+      "text": "Sample text to translate",
+      "sourceLanguage": "en",
+      "targetLanguage": "es"
+    }
+    ```
+  - **Response**: The translated text in the target language.
 
 ---
 
