@@ -4,26 +4,26 @@
     "net8.0": {
       "AWSSDK.Core": {
         "type": "Direct",
-        "requested": "[3.7.400.70, )",
-        "resolved": "3.7.400.70",
-        "contentHash": "S0mcK1Bqa8xVh9UU+Rg9VEdjHfD2B75WRtBmh4ANTelUcTThG7T/ujNjxLXhzZQKW2j1V+KHUEViW4+OLB4Vkg=="
+        "requested": "[3.7.400.72, )",
+        "resolved": "3.7.400.72",
+        "contentHash": "L/3vuMdnTwLjfJm8pPUJXl2cKmam4rDnOC1mrJjUGdoSDzExIJxgzMjZi1cdCGd8aWJGPkizJGQz6+q2wwnHVA=="
       },
       "AWSSDK.Polly": {
         "type": "Direct",
-        "requested": "[3.7.401.59, )",
-        "resolved": "3.7.401.59",
-        "contentHash": "wSg7FniT4xzQBcNBkkUdK7mzvMWXsT3ROQWmjDr//pNxvQ4EXZnACQPWC40nGuU1b+hYd8MuBWViqK0Su5+lkA==",
+        "requested": "[3.7.401.61, )",
+        "resolved": "3.7.401.61",
+        "contentHash": "lrPzfCHEmYdmnNykQCMZUd3+ubvUuDMkBykO3pZY/A7ngUpJT3z+GYRt83+tfksylvbh52nwxiD4U6N6Mol4Mw==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.70, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Direct",
-        "requested": "[3.7.400.70, )",
-        "resolved": "3.7.400.70",
-        "contentHash": "DAqvxPHn7+hKlLS4y32tTxqxGkOW/tJQERUePhLkQKH242Kgw1BOJEx1JyjJYpyQOPsuSfgDoSxM1u2YmH6c2g==",
+        "requested": "[3.7.400.72, )",
+        "resolved": "3.7.400.72",
+        "contentHash": "Wm7RSRw0qN0QJNOwNUaLOi5iPUoGCf/Z//AB0UrxhpEA4QUmXDL1efUHu51LRf8hhi60B26tWhXM18IQ2kvxnQ==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.70, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
         }
       },
       "CSharpier.MsBuild": {
@@ -93,9 +93,9 @@
       },
       "Scrutor": {
         "type": "Direct",
-        "requested": "[5.1.0, )",
-        "resolved": "5.1.0",
-        "contentHash": "E+jpEv58Kx6jNGdox41sdIMyweB1Es3mReiK7IfUe1bsK4wnXNROUdfppBDuyTMf4/rKvwb2WBxYoOTRNJWLow==",
+        "requested": "[5.1.1, )",
+        "resolved": "5.1.1",
+        "contentHash": "dLzrEZTzS+ahww88hMtwekpkVW7t0XtUiJQFjojoes+gcSociUY9VkCF/a9Fsgmb6Gvp+aVlD14T4ujZ8lLwaw==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.DependencyModel": "8.0.2"
