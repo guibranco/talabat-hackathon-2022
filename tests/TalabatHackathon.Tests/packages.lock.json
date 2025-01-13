@@ -65,29 +65,29 @@
       },
       "xunit.runner.visualstudio": {
         "type": "Direct",
-        "requested": "[3.0.0, )",
-        "resolved": "3.0.0",
-        "contentHash": "HggUqjQJe8PtDxcP25Q+CnR6Lz4oX3GElhD9V4oU2+75x9HI6A6sxbfKGS4UwU4t4yJaS9fBmAuriz8bQApNjw=="
+        "requested": "[3.0.1, )",
+        "resolved": "3.0.1",
+        "contentHash": "lbyYtsBxA8Pz8kaf5Xn/Mj1mL9z2nlBWdZhqFaj66nxXBa4JwiTDm4eGcpSMet6du9TOWI6bfha+gQR6+IHawg=="
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.400.72",
-        "contentHash": "L/3vuMdnTwLjfJm8pPUJXl2cKmam4rDnOC1mrJjUGdoSDzExIJxgzMjZi1cdCGd8aWJGPkizJGQz6+q2wwnHVA=="
+        "resolved": "3.7.400.77",
+        "contentHash": "xpTOkzkqawZpCfGumTPTL5vMc/6VnxoQKAlhZLHliLiwRFiTMc+8BAaJ8aiAL7KzqFN1jqZ6EaQD9AYGoKe7wg=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
-        "resolved": "3.7.401.61",
-        "contentHash": "lrPzfCHEmYdmnNykQCMZUd3+ubvUuDMkBykO3pZY/A7ngUpJT3z+GYRt83+tfksylvbh52nwxiD4U6N6Mol4Mw==",
+        "resolved": "3.7.401.66",
+        "contentHash": "YRmpir0M806/hrScEQT3PPesCJyXwyfjJZHo03Lb+PZQn/oo2XF0MzBIbs2MeLTBmknoQB4SzuvGFBRvuhN80g==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.77, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "3.7.400.72",
-        "contentHash": "Wm7RSRw0qN0QJNOwNUaLOi5iPUoGCf/Z//AB0UrxhpEA4QUmXDL1efUHu51LRf8hhi60B26tWhXM18IQ2kvxnQ==",
+        "resolved": "3.7.400.77",
+        "contentHash": "hsZ/wher1g+9abFAg9h+a6+I+VKIvAgxiGZGVWqjneIidvGpa+htB0b7zxTNhd8L85uLbXyKZAhMfKlr97x86g==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.77, 4.0.0)"
         }
       },
       "Castle.Core": {
@@ -1294,9 +1294,9 @@
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.72, )",
-          "AWSSDK.Polly": "[3.7.401.61, )",
-          "AWSSDK.Translate": "[3.7.400.72, )",
+          "AWSSDK.Core": "[3.7.400.77, )",
+          "AWSSDK.Polly": "[3.7.401.66, )",
+          "AWSSDK.Translate": "[3.7.400.77, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.21.0, )",
