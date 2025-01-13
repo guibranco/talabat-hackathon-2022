@@ -10,9 +10,9 @@
       },
       "CSharpier.MsBuild": {
         "type": "Direct",
-        "requested": "[0.30.5, )",
-        "resolved": "0.30.5",
-        "contentHash": "iYtW9tS2cNynNWF0SPcYlU+mFZOKicge89LXTpvfRadAbBgHQHCKCOPcPSBzjF4aTVRX3Vw/HOz1JXzGU8fvVA=="
+        "requested": "[0.30.6, )",
+        "resolved": "0.30.6",
+        "contentHash": "m/KjEvc7f4+IGAL05F+tXwY5JHje6CeMjCc6mS4nlQlFJA36DM+UmoPCS5hDnLUw2s0aKMDoXdCxUrNe9PHBsA=="
       },
       "FluentAssertions": {
         "type": "Direct",
@@ -54,13 +54,13 @@
       },
       "xunit": {
         "type": "Direct",
-        "requested": "[2.9.2, )",
-        "resolved": "2.9.2",
-        "contentHash": "7LhFS2N9Z6Xgg8aE5lY95cneYivRMfRI8v+4PATa4S64D5Z/Plkg0qa8dTRHSiGRgVZ/CL2gEfJDE5AUhOX+2Q==",
+        "requested": "[2.9.3, )",
+        "resolved": "2.9.3",
+        "contentHash": "TlXQBinK35LpOPKHAqbLY4xlEen9TBafjs0V5KnA4wZsoQLQJiirCR4CbIXvOH8NzkW4YeJKP5P/Bnrodm0h9Q==",
         "dependencies": {
-          "xunit.analyzers": "1.16.0",
-          "xunit.assert": "2.9.2",
-          "xunit.core": "[2.9.2]"
+          "xunit.analyzers": "1.18.0",
+          "xunit.assert": "2.9.3",
+          "xunit.core": "[2.9.3]"
         }
       },
       "xunit.runner.visualstudio": {
@@ -71,23 +71,23 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.400.70",
-        "contentHash": "S0mcK1Bqa8xVh9UU+Rg9VEdjHfD2B75WRtBmh4ANTelUcTThG7T/ujNjxLXhzZQKW2j1V+KHUEViW4+OLB4Vkg=="
+        "resolved": "3.7.400.72",
+        "contentHash": "L/3vuMdnTwLjfJm8pPUJXl2cKmam4rDnOC1mrJjUGdoSDzExIJxgzMjZi1cdCGd8aWJGPkizJGQz6+q2wwnHVA=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
-        "resolved": "3.7.401.59",
-        "contentHash": "wSg7FniT4xzQBcNBkkUdK7mzvMWXsT3ROQWmjDr//pNxvQ4EXZnACQPWC40nGuU1b+hYd8MuBWViqK0Su5+lkA==",
+        "resolved": "3.7.401.61",
+        "contentHash": "lrPzfCHEmYdmnNykQCMZUd3+ubvUuDMkBykO3pZY/A7ngUpJT3z+GYRt83+tfksylvbh52nwxiD4U6N6Mol4Mw==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.70, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "3.7.400.70",
-        "contentHash": "DAqvxPHn7+hKlLS4y32tTxqxGkOW/tJQERUePhLkQKH242Kgw1BOJEx1JyjJYpyQOPsuSfgDoSxM1u2YmH6c2g==",
+        "resolved": "3.7.400.72",
+        "contentHash": "Wm7RSRw0qN0QJNOwNUaLOi5iPUoGCf/Z//AB0UrxhpEA4QUmXDL1efUHu51LRf8hhi60B26tWhXM18IQ2kvxnQ==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.70, 4.0.0)"
+          "AWSSDK.Core": "[3.7.400.72, 4.0.0)"
         }
       },
       "Castle.Core": {
@@ -1061,8 +1061,8 @@
       },
       "Scrutor": {
         "type": "Transitive",
-        "resolved": "5.1.0",
-        "contentHash": "E+jpEv58Kx6jNGdox41sdIMyweB1Es3mReiK7IfUe1bsK4wnXNROUdfppBDuyTMf4/rKvwb2WBxYoOTRNJWLow==",
+        "resolved": "5.1.1",
+        "contentHash": "dLzrEZTzS+ahww88hMtwekpkVW7t0XtUiJQFjojoes+gcSociUY9VkCF/a9Fsgmb6Gvp+aVlD14T4ujZ8lLwaw==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.DependencyModel": "8.0.2"
@@ -1258,50 +1258,50 @@
       },
       "xunit.analyzers": {
         "type": "Transitive",
-        "resolved": "1.16.0",
-        "contentHash": "hptYM7vGr46GUIgZt21YHO4rfuBAQS2eINbFo16CV/Dqq+24Tp+P5gDCACu1AbFfW4Sp/WRfDPSK8fmUUb8s0Q=="
+        "resolved": "1.18.0",
+        "contentHash": "OtFMHN8yqIcYP9wcVIgJrq01AfTxijjAqVDy/WeQVSyrDC1RzBWeQPztL49DN2syXRah8TYnfvk035s7L95EZQ=="
       },
       "xunit.assert": {
         "type": "Transitive",
-        "resolved": "2.9.2",
-        "contentHash": "QkNBAQG4pa66cholm28AxijBjrmki98/vsEh4Sx5iplzotvPgpiotcxqJQMRC8d7RV7nIT8ozh97957hDnZwsQ=="
+        "resolved": "2.9.3",
+        "contentHash": "/Kq28fCE7MjOV42YLVRAJzRF0WmEqsmflm0cfpMjGtzQ2lR5mYVj1/i0Y8uDAOLczkL3/jArrwehfMD0YogMAA=="
       },
       "xunit.core": {
         "type": "Transitive",
-        "resolved": "2.9.2",
-        "contentHash": "O6RrNSdmZ0xgEn5kT927PNwog5vxTtKrWMihhhrT0Sg9jQ7iBDciYOwzBgP2krBEk5/GBXI18R1lKvmnxGcb4w==",
+        "resolved": "2.9.3",
+        "contentHash": "BiAEvqGvyme19wE0wTKdADH+NloYqikiU0mcnmiNyXaF9HyHmE6sr/3DC5vnBkgsWaE6yPyWszKSPSApWdRVeQ==",
         "dependencies": {
-          "xunit.extensibility.core": "[2.9.2]",
-          "xunit.extensibility.execution": "[2.9.2]"
+          "xunit.extensibility.core": "[2.9.3]",
+          "xunit.extensibility.execution": "[2.9.3]"
         }
       },
       "xunit.extensibility.core": {
         "type": "Transitive",
-        "resolved": "2.9.2",
-        "contentHash": "Ol+KlBJz1x8BrdnhN2DeOuLrr1I/cTwtHCggL9BvYqFuVd/TUSzxNT5O0NxCIXth30bsKxgMfdqLTcORtM52yQ==",
+        "resolved": "2.9.3",
+        "contentHash": "kf3si0YTn2a8J8eZNb+zFpwfoyvIrQ7ivNk5ZYA5yuYk1bEtMe4DxJ2CF/qsRgmEnDr7MnW1mxylBaHTZ4qErA==",
         "dependencies": {
           "xunit.abstractions": "2.0.3"
         }
       },
       "xunit.extensibility.execution": {
         "type": "Transitive",
-        "resolved": "2.9.2",
-        "contentHash": "rKMpq4GsIUIJibXuZoZ8lYp5EpROlnYaRpwu9Zr0sRZXE7JqJfEEbCsUriZqB+ByXCLFBJyjkTRULMdC+U566g==",
+        "resolved": "2.9.3",
+        "contentHash": "yMb6vMESlSrE3Wfj7V6cjQ3S4TXdXpRqYeNEI3zsX31uTsGMJjEw6oD5F5u1cHnMptjhEECnmZSsPxB6ChZHDQ==",
         "dependencies": {
-          "xunit.extensibility.core": "[2.9.2]"
+          "xunit.extensibility.core": "[2.9.3]"
         }
       },
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.400.70, )",
-          "AWSSDK.Polly": "[3.7.401.59, )",
-          "AWSSDK.Translate": "[3.7.400.70, )",
+          "AWSSDK.Core": "[3.7.400.72, )",
+          "AWSSDK.Polly": "[3.7.401.61, )",
+          "AWSSDK.Translate": "[3.7.400.72, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.21.0, )",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "[9.0.0, )",
-          "Scrutor": "[5.1.0, )",
+          "Scrutor": "[5.1.1, )",
           "Swashbuckle.AspNetCore": "[7.2.0, )"
         }
       }
