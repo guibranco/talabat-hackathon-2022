@@ -93,9 +93,9 @@
       },
       "Scrutor": {
         "type": "Direct",
-        "requested": "[5.1.1, )",
-        "resolved": "5.1.1",
-        "contentHash": "dLzrEZTzS+ahww88hMtwekpkVW7t0XtUiJQFjojoes+gcSociUY9VkCF/a9Fsgmb6Gvp+aVlD14T4ujZ8lLwaw==",
+        "requested": "[6.0.0, )",
+        "resolved": "6.0.0",
+        "contentHash": "KK8R6j19cDWOjKPxeVwxkqoD/VQqb4ZX8VEeTMCMlOUC7N28NHZzJ8rHBmHvfG2aecXrvtXqWl3+ExvtYW3eFA==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
           "Microsoft.Extensions.DependencyModel": "8.0.2"
