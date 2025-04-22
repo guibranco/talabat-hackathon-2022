@@ -68,23 +68,23 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.402.35",
-        "contentHash": "9Jby5BBQTzZOqzQiFjJyr3zCe5GVi64U8gxOlPk3vTTuVJqtkisBJ0Jh1RBj2fNqnWmJLfaWSCLvX1L06zwHnQ=="
+        "resolved": "3.7.402.43",
+        "contentHash": "iAo889ehvfXCORxLF+o7BmKnBAtBTWD7aVMTP+P1sPlHlVqvIj4S3MUaDYjR7b1MGUTsE+UBNyj3tu+cj1MBqA=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
-        "resolved": "3.7.403.8",
-        "contentHash": "pJeEe5KLKYQ7DWfMfFf9idtXx+6lSArJcIhgBBHTk3F7XYsHq8qia3zZlWYvFWvRXBgyuoyjijiLON7rs+S98g==",
+        "resolved": "3.7.403.16",
+        "contentHash": "96Apt8o1f8MxKpzXxfL0kA5an9LgDU48iDNUdA2LQ9y1IVqI8emesIGIff9wlwaMWYRIIK/twqElQzJ8llY/7Q==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.35, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "3.7.400.129",
-        "contentHash": "0WakBZpiF/i4LtktSPc7XHIkKS38tgenltetNilSaUoU3nG/wVwKCVhJy49GoT+hCa4u3VzRwh3OXkn/I5SpCA==",
+        "resolved": "3.7.400.137",
+        "contentHash": "8MkG1enf5V1QtPbGFc4TaU1Pv5KOtm2Q559Kes1w+G1aBwNengZHAYrWZhwfIdTnDPaHkuFeyeblcVQrazEjDg==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.35, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
         }
       },
       "Castle.Core": {
@@ -1291,9 +1291,9 @@
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.35, )",
-          "AWSSDK.Polly": "[3.7.403.8, )",
-          "AWSSDK.Translate": "[3.7.400.129, )",
+          "AWSSDK.Core": "[3.7.402.43, )",
+          "AWSSDK.Polly": "[3.7.403.16, )",
+          "AWSSDK.Translate": "[3.7.400.137, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.21.0, )",
