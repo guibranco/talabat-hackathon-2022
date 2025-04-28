@@ -68,23 +68,23 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.402.43",
-        "contentHash": "iAo889ehvfXCORxLF+o7BmKnBAtBTWD7aVMTP+P1sPlHlVqvIj4S3MUaDYjR7b1MGUTsE+UBNyj3tu+cj1MBqA=="
+        "resolved": "3.7.402.46",
+        "contentHash": "/W2Y/8PmNilP4qONoPJz5/AgHwvwblmE8wvf1nG+oqqd2fX88vUNRToHmdVxZUqjLtx64VryI7iGKRaPUDMkTA=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
-        "resolved": "3.7.403.16",
-        "contentHash": "96Apt8o1f8MxKpzXxfL0kA5an9LgDU48iDNUdA2LQ9y1IVqI8emesIGIff9wlwaMWYRIIK/twqElQzJ8llY/7Q==",
+        "resolved": "3.7.403.19",
+        "contentHash": "dK5m8ZMhYS4vv17TlaHFlDE6jkQKfsNceeEknUg3Um0krLgxKsKeCYXi+kvt7xyvU7mwIw9UhH0ruyPQJcIzzA==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.46, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "3.7.400.137",
-        "contentHash": "8MkG1enf5V1QtPbGFc4TaU1Pv5KOtm2Q559Kes1w+G1aBwNengZHAYrWZhwfIdTnDPaHkuFeyeblcVQrazEjDg==",
+        "resolved": "3.7.400.140",
+        "contentHash": "wFxBSIqMLqF2N+zKQ8LVQbvAp37aAkEYRbYJrAsWoTDz1cl3Rmdsrtt1VJrn9dcJ6UoPZ2RvtcZJVXx8m/39Ng==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.46, 4.0.0)"
         }
       },
       "Castle.Core": {
@@ -1067,35 +1067,35 @@
       },
       "Swashbuckle.AspNetCore": {
         "type": "Transitive",
-        "resolved": "8.1.0",
-        "contentHash": "8NJwXskWNBhX4IntitP1VP68hzhQ9Sex4mR9ZbqCuuUsaWlfrMA+yDIYDFsbHlB2NQ6Gt27AT15BWo9jxHj1tg==",
+        "resolved": "8.1.1",
+        "contentHash": "HJHexmU0PiYevgTLvKjYkxEtclF2w4O7iTd3Ef3p6KeT0kcYLpkFVgCw6glpGS57h8769anv8G+NFi9Kge+/yw==",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
-          "Swashbuckle.AspNetCore.Swagger": "8.1.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "8.1.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "8.1.0"
+          "Swashbuckle.AspNetCore.Swagger": "8.1.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "8.1.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "8.1.1"
         }
       },
       "Swashbuckle.AspNetCore.Swagger": {
         "type": "Transitive",
-        "resolved": "8.1.0",
-        "contentHash": "TRpBDdWh/6IzXHOLKVEuZSuhcdc8OIwhr8dyLnWvEh6FO4f0KiATAzr8yzHspcCFzCc/CONpvUCq4DzazpP6Og==",
+        "resolved": "8.1.1",
+        "contentHash": "h+8D5jQtnl6X4f2hJQwf0Khj0SnCQANzirCELjXJ6quJ4C1aNNCvJrAsQ+4fOKAMqJkvW48cKj79ftG+YoGcRg==",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.23"
         }
       },
       "Swashbuckle.AspNetCore.SwaggerGen": {
         "type": "Transitive",
-        "resolved": "8.1.0",
-        "contentHash": "sXAUNodmnzrJb1qmgdLY6HgTDsgagXCn6p+qygW2wP0BjcvdZZA6GdDgtuc8iQON9ekrp7m5G0Zc09lvuNhc/A==",
+        "resolved": "8.1.1",
+        "contentHash": "2EuPzXSNleOOzYvziERWRLnk1Oz9i0Z1PimaUFy1SasBqeV/rG+eMfwFAMtTaf4W6gvVOzRcUCNRHvpBIIzr+A==",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "8.1.0"
+          "Swashbuckle.AspNetCore.Swagger": "8.1.1"
         }
       },
       "Swashbuckle.AspNetCore.SwaggerUI": {
         "type": "Transitive",
-        "resolved": "8.1.0",
-        "contentHash": "PYyTbYrEz1q8N8ZpCFzY5hOkvP5gv9oIml06wrrrjGRFvVXyCF/b58FRI/9mnRKRBAmWKZR5pqhmJBzvsVveSQ=="
+        "resolved": "8.1.1",
+        "contentHash": "GDLX/MpK4oa2nYC1N/zN2UidQTtVKLPF6gkdEmGb0RITEwpJG9Gu8olKqPYnKqVeFn44JZoCS0M2LGRKXP8B/A=="
       },
       "System.CodeDom": {
         "type": "Transitive",
@@ -1291,15 +1291,15 @@
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.43, )",
-          "AWSSDK.Polly": "[3.7.403.16, )",
-          "AWSSDK.Translate": "[3.7.400.137, )",
+          "AWSSDK.Core": "[3.7.402.46, )",
+          "AWSSDK.Polly": "[3.7.403.19, )",
+          "AWSSDK.Translate": "[3.7.400.140, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.21.0, )",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "[9.0.0, )",
           "Scrutor": "[6.0.1, )",
-          "Swashbuckle.AspNetCore": "[8.1.0, )"
+          "Swashbuckle.AspNetCore": "[8.1.1, )"
         }
       }
     }

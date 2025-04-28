@@ -4,26 +4,26 @@
     "net8.0": {
       "AWSSDK.Core": {
         "type": "Direct",
-        "requested": "[3.7.402.43, )",
-        "resolved": "3.7.402.43",
-        "contentHash": "iAo889ehvfXCORxLF+o7BmKnBAtBTWD7aVMTP+P1sPlHlVqvIj4S3MUaDYjR7b1MGUTsE+UBNyj3tu+cj1MBqA=="
+        "requested": "[3.7.402.46, )",
+        "resolved": "3.7.402.46",
+        "contentHash": "/W2Y/8PmNilP4qONoPJz5/AgHwvwblmE8wvf1nG+oqqd2fX88vUNRToHmdVxZUqjLtx64VryI7iGKRaPUDMkTA=="
       },
       "AWSSDK.Polly": {
         "type": "Direct",
-        "requested": "[3.7.403.16, )",
-        "resolved": "3.7.403.16",
-        "contentHash": "96Apt8o1f8MxKpzXxfL0kA5an9LgDU48iDNUdA2LQ9y1IVqI8emesIGIff9wlwaMWYRIIK/twqElQzJ8llY/7Q==",
+        "requested": "[3.7.403.19, )",
+        "resolved": "3.7.403.19",
+        "contentHash": "dK5m8ZMhYS4vv17TlaHFlDE6jkQKfsNceeEknUg3Um0krLgxKsKeCYXi+kvt7xyvU7mwIw9UhH0ruyPQJcIzzA==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.46, 4.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Direct",
-        "requested": "[3.7.400.137, )",
-        "resolved": "3.7.400.137",
-        "contentHash": "8MkG1enf5V1QtPbGFc4TaU1Pv5KOtm2Q559Kes1w+G1aBwNengZHAYrWZhwfIdTnDPaHkuFeyeblcVQrazEjDg==",
+        "requested": "[3.7.400.140, )",
+        "resolved": "3.7.400.140",
+        "contentHash": "wFxBSIqMLqF2N+zKQ8LVQbvAp37aAkEYRbYJrAsWoTDz1cl3Rmdsrtt1VJrn9dcJ6UoPZ2RvtcZJVXx8m/39Ng==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.402.43, 4.0.0)"
+          "AWSSDK.Core": "[3.7.402.46, 4.0.0)"
         }
       },
       "CSharpier.MsBuild": {
