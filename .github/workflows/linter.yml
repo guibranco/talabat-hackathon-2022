@@ -1,25 +1,87 @@
 name: Linter check
 
 on:
-  pull_request
-  
+  pull_request:
+
 concurrency: 
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
-  
-jobs:
 
+jobs:
   linter-check:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout repo
         uses: actions/checkout@v4
-        
-      - uses: actions/setup-dotnet@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+
       - name: Dotnet restore
         run: dotnet tool restore
-        
-      - name: Csharpier format check
+
+      - name: CSharpier format check
+        id: csharpier
         run: |
-          dotnet csharpier . --check
-          echo "run 'dotnet build' to fix the formatting of the code automatically"
+          # Run CSharpier and capture output
+          output=$(dotnet csharpier . --check || true)
+          echo "$output" > csharpier-output.txt
+
+          echo "$output"
+
+          current_file=""
+          current_line="1"
+
+          # Create a temp file for the summary
+          summary_file="csharpier-summary.md"
+          echo "## 🔥 Formatting issues detected" > "$summary_file"
+          echo "" >> "$summary_file"
+          echo "| File | Line |" >> "$summary_file"
+          echo "|:-----|:----:|" >> "$summary_file"
+
+          while IFS= read -r line; do
+            if [[ "$line" =~ ^Error\ (.+)\ -\ Was\ not\ formatted\.$ ]]; then
+              current_file="${BASH_REMATCH[1]}"
+              current_line="1"
+            elif [[ "$line" =~ Expected:\ Around\ Line\ ([0-9]+) ]]; then
+              current_line="${BASH_REMATCH[1]}"
+              # Emit a warning annotation
+              echo "::warning file=$current_file,line=$current_line::File is not formatted correctly. Run 'dotnet csharpier .' to fix."
+
+              # Add to summary
+              echo "| $current_file | $current_line |" >> "$summary_file"
+            fi
+          done <<< "$output"
+
+          # If any errors were found, prepare outputs
+          if grep -q '^Error ' csharpier-output.txt; then
+            echo "" >> "$summary_file"
+            echo "⚡ Please run \`dotnet csharpier .\` locally to fix the formatting issues." >> "$summary_file"
+
+            # Upload as job summary
+            cat "$summary_file" >> "$GITHUB_STEP_SUMMARY"
+
+            # Save that issues were detected
+            echo "issues_detected=true" >> $GITHUB_ENV
+          else
+            echo "issues_detected=false" >> $GITHUB_ENV
+          fi
+
+      - name: Find existing comment
+        if: env.issues_detected == 'true'
+        id: find-comment
+        uses: peter-evans/find-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: github-actions[bot]
+          body-includes: 🔥 Formatting issues detected
+
+      - name: Create or update PR comment
+        if: env.issues_detected == 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: csharpier-summary.md
+          edit-mode: replace
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
