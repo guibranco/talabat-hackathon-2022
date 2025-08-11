@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:9.0.303 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.304 AS build
 WORKDIR /src
 COPY ["src/TalabatHackathon.API/TalabatHackathon.API.csproj", "TalabatHackathon.API/"]
 RUN dotnet restore "TalabatHackathon.API/TalabatHackathon.API.csproj"
