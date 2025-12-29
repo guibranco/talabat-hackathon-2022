@@ -28,9 +28,9 @@
       },
       "CSharpier.MsBuild": {
         "type": "Direct",
-        "requested": "[1.2.3, )",
-        "resolved": "1.2.3",
-        "contentHash": "9MP9UXAFUvRmCW1JUNPqgKhSPlx6LXSKUKdPCPVKmRz46UjloJQimvZyBRUY1K3WZytFsjbKaViOBbq8rOtt0g=="
+        "requested": "[1.2.4, )",
+        "resolved": "1.2.4",
+        "contentHash": "69mwjC5/dJM8/FWvQ33NdnmZzvrxnz1622WiOaixqOsy0z54g8dGD37Nz8XRlfBTdRVS/Ux/iQTyPGV75IxHIw=="
       },
       "Microsoft.AspNetCore.Mvc.Versioning": {
         "type": "Direct",
