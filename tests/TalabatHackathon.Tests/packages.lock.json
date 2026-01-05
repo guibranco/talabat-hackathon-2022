@@ -10,9 +10,9 @@
       },
       "CSharpier.MsBuild": {
         "type": "Direct",
-        "requested": "[1.2.4, )",
-        "resolved": "1.2.4",
-        "contentHash": "69mwjC5/dJM8/FWvQ33NdnmZzvrxnz1622WiOaixqOsy0z54g8dGD37Nz8XRlfBTdRVS/Ux/iQTyPGV75IxHIw=="
+        "requested": "[1.2.5, )",
+        "resolved": "1.2.5",
+        "contentHash": "U9csejWXDk/ZXZpigcu22KAOINQj7qNujeJFj0HsHOqKzuW9xX+eaCFFHrfjOdIDQYzslQAe9e6Gt9HGMRC/aA=="
       },
       "FluentAssertions": {
         "type": "Direct",
