@@ -20,7 +20,7 @@
   <ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
     <PackageReference
       Include="Microsoft.SourceLink.GitHub"
-      Version="10.0.102"
+      Version="10.0.103"
       PrivateAssets="All"
       Condition="'$(GITHUB_ACTIONS)' == 'true'"
     />
