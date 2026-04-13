@@ -11,9 +11,9 @@
     <None Include="..\..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.Core" Version="4.0.3.27" />
+    <PackageReference Include="AWSSDK.Core" Version="4.0.3.29" />
     <PackageReference Include="AWSSDK.Polly" Version="4.0.6.2" />
-    <PackageReference Include="AWSSDK.Translate" Version="4.0.1.23" />
+    <PackageReference Include="AWSSDK.Translate" Version="4.0.1.25" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
     <PackageReference
