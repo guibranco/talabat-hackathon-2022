@@ -4,9 +4,9 @@
     "net8.0": {
       "coverlet.msbuild": {
         "type": "Direct",
-        "requested": "[8.0.1, )",
-        "resolved": "8.0.1",
-        "contentHash": "YkP5ZQBSwDno2uUdND/x0tmyLOacCxvKwSN2iEvndpw7OzBaH7STi2xeA06KKkyYHN0m76qDK8Pdz1CVdAPoeg=="
+        "requested": "[10.0.0, )",
+        "resolved": "10.0.0",
+        "contentHash": "pmUxktztlMnsIvgHjzxG3fHRAXpqmZSA+W8dIsbVMfwI01SnBndrBIOE3Stg6987+o7HjBa62C4q5um3Ia6d9g=="
       },
       "CSharpier.MsBuild": {
         "type": "Direct",
@@ -69,8 +69,8 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "4.0.3.27",
-        "contentHash": "hGdpxa7GR2JrfOGI35MWlGCiqq4GlpNDJi0DDvE8lJunboziMFeTCXypvstS5eo0WYdJR9pqHykR53QsjWj7jg=="
+        "resolved": "4.0.3.29",
+        "contentHash": "y07n9BHBVRDe3fDAjitnOBPwDwJ5NZ4oOh6ZvOizYWEsJnYcs34FQtTJ70Gt17qTCH86ma5kJdyMZ2lixm/dqg=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
@@ -82,10 +82,10 @@
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "4.0.1.23",
-        "contentHash": "h7UlVuTL3khqqiqJF3CMowy3saNyOmVXNnp+j+e5WizctomjN/HcNDi5c0osaXHmraCZfmJmLe1hO+QR4doaUA==",
+        "resolved": "4.0.1.25",
+        "contentHash": "B97kNqr9fIzbR77Vy/r1NiWyb2SvOMJXs3gerH7ezgb7z4v9YXsUJLKJsQ+Uru9gRXBeN0qkYgkt7rlvlaNijA==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.3.27, 5.0.0)"
+          "AWSSDK.Core": "[4.0.3.29, 5.0.0)"
         }
       },
       "Castle.Core": {
@@ -1303,9 +1303,9 @@
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.3.27, )",
+          "AWSSDK.Core": "[4.0.3.29, )",
           "AWSSDK.Polly": "[4.0.6.2, )",
-          "AWSSDK.Translate": "[4.0.1.23, )",
+          "AWSSDK.Translate": "[4.0.1.25, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.23.0, )",
