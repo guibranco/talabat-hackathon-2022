@@ -32,13 +32,13 @@
       },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
-        "requested": "[10.0.203, )",
-        "resolved": "10.0.203",
-        "contentHash": "R4Tvr1oACImMS+Y5M7NM07ll9QyJSKnki3Dvz8QwG1W6FEmd+9fmZXAF6BE6UPswHF6n0v41wgMQGlaudOspqA==",
+        "requested": "[10.0.300, )",
+        "resolved": "10.0.300",
+        "contentHash": "QzCtLkXVb3l4IxcpvJCbzUwMLihAmLN6vVLjQGSzYSF8d2dvXxqJAZk83RV3gYnp2egz8jRMgSR2woY3vOahTA==",
         "dependencies": {
-          "Microsoft.Build.Tasks.Git": "10.0.203",
-          "Microsoft.SourceLink.Common": "10.0.203",
-          "System.IO.Hashing": "10.0.7"
+          "Microsoft.Build.Tasks.Git": "10.0.300",
+          "Microsoft.SourceLink.Common": "10.0.300",
+          "System.IO.Hashing": "10.0.8"
         }
       },
       "NSubstitute": {
@@ -69,23 +69,23 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "4.0.4",
-        "contentHash": "RjBk1WDrOCpsSRGn6j2lYhgiyYnXEhMctwJevNnIPIIGpgj49ifbU6FmG1Dk+1M/VSuqeTQ1WVsssziTty7b2w=="
+        "resolved": "4.0.6.1",
+        "contentHash": "rPhyuf5BtxAxI1x4a9DlMfknODiVzr9Kc5QWDjn/thmnmCLT6ggBh0zlpaXlP/MtdpN/mhEpTIODvzMIWrICVQ=="
       },
       "AWSSDK.Polly": {
         "type": "Transitive",
-        "resolved": "4.0.6.9",
-        "contentHash": "IpeuUG41UUsRYE/MGPEEVAQn84oSBePqOKqgJ0N2w8hP8uEgoBM/JVR9UCBxqVPUzQzqxzQEBX8cy1qEd2s5Cw==",
+        "resolved": "4.0.6.10",
+        "contentHash": "bet9dmyqmqNtnFPilDT7hNjBShOrre6AVY77bodGPbz+falsPV4eLWf0YDhUXHidG/XeV4c/lHVciME4nn0OkQ==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.4, 5.0.0)"
+          "AWSSDK.Core": "[4.0.6.1, 5.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Transitive",
-        "resolved": "4.0.1.27",
-        "contentHash": "JEgcg3PaI7Q5qlV6zIYIx0cY1CKQ+pir4MG6+myuxVb4GJG8EzWDxwHpUoj5KEMYjD8loQ1QxFkm5Wgc+sqQ9Q==",
+        "resolved": "4.0.1.28",
+        "contentHash": "Mjz1D3sFdpLUKmEZb2V93fA+su8M1dffQB3LUzQ0A2q6Rd7poT/yFKol+/3DsUCvVbSP3qwXxqaQtDiz/Y9zkQ==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.4, 5.0.0)"
+          "AWSSDK.Core": "[4.0.6.1, 5.0.0)"
         }
       },
       "Castle.Core": {
@@ -585,10 +585,10 @@
       },
       "Microsoft.Build.Tasks.Git": {
         "type": "Transitive",
-        "resolved": "10.0.203",
-        "contentHash": "m56WtzvIcL6t7JR3c7ogYitHizNM2QnRSo8yqxrQi+m5E/GGyDEmqymP+2p6YsFXn0j/Tzz67s4FQnrTLC7GKQ==",
+        "resolved": "10.0.300",
+        "contentHash": "P0kaQwVZx4xIUe2FtrLyBadYNXuAljttJUPvjBYRuHhPE8L77L42KakLDkaADRiUrGspoLcMwayjrbQhYTr0zA==",
         "dependencies": {
-          "System.IO.Hashing": "10.0.7"
+          "System.IO.Hashing": "10.0.8"
         }
       },
       "Microsoft.CodeAnalysis.Analyzers": {
@@ -771,8 +771,8 @@
       },
       "Microsoft.SourceLink.Common": {
         "type": "Transitive",
-        "resolved": "10.0.203",
-        "contentHash": "QYAnhBCOkT3ZUT/fHag11+bamwlbZ3U9Vi/WfKrD9emdUf1t3aqjWv0V2KtEGHSRSC81aBc8Oy/mvyGpEYd9Pg=="
+        "resolved": "10.0.300",
+        "contentHash": "0jlkXaUGjYlWTIVPve5MftjKHnT3SlAtq9BCLV4J9IjdPrxV/+4rMlBSjfr1khG8/GC6KGojjola8E1VvWF0qQ=="
       },
       "Microsoft.TestPlatform.ObjectModel": {
         "type": "Transitive",
@@ -1188,8 +1188,8 @@
       },
       "System.IO.Hashing": {
         "type": "Transitive",
-        "resolved": "10.0.7",
-        "contentHash": "6hsjdSr4VOXSOnhALkYplHpAxnTG1J33YN42IB6nH2fEg4QnJqrZ4Ft+qn7mkrKAOYC8pCSFYwVWw6rQbmwgLQ=="
+        "resolved": "10.0.8",
+        "contentHash": "+dJsbPJ3FyUbTZNplFj0RCKePFizmv6ewDV46JE9q/IVH4c3xTCftHfHelLsAKf0jryIPqgMb5GpS0x7TAY3mg=="
       },
       "System.IO.Pipelines": {
         "type": "Transitive",
@@ -1303,9 +1303,9 @@
       "talabathackathon.api": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.4, )",
-          "AWSSDK.Polly": "[4.0.6.9, )",
-          "AWSSDK.Translate": "[4.0.1.27, )",
+          "AWSSDK.Core": "[4.0.6.1, )",
+          "AWSSDK.Polly": "[4.0.6.10, )",
+          "AWSSDK.Translate": "[4.0.1.28, )",
           "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "[5.1.0, )",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "[1.23.0, )",
