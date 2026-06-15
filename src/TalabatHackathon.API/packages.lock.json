@@ -4,26 +4,26 @@
     "net8.0": {
       "AWSSDK.Core": {
         "type": "Direct",
-        "requested": "[4.0.8, )",
-        "resolved": "4.0.8",
-        "contentHash": "JFq4sdtnlLePkISe5M0j1a5ushTrvwCGO1CNOGZaoBv33dscHls14m5dsPzyrN54xn924MtAP+s5xTdfNGNTUQ=="
+        "requested": "[4.0.9.2, )",
+        "resolved": "4.0.9.2",
+        "contentHash": "BW8nJkdjRFWMqk1ufvqUMqF+Axx+lJX/HTst6eKQw//PQf2wUx8i9xf5MSItazHZeatOVLLhZhwyALIlsiQD7g=="
       },
       "AWSSDK.Polly": {
         "type": "Direct",
-        "requested": "[4.0.7.1, )",
-        "resolved": "4.0.7.1",
-        "contentHash": "xqUt4/1F3NqtLo0aZ6zPeC+SLlZVAQ5vbUvb5jJpu/o/4Kz5GuSa0npU83MK2qJxdVWtWaibiVReXEm5DWnw9Q==",
+        "requested": "[4.0.7.4, )",
+        "resolved": "4.0.7.4",
+        "contentHash": "78+HTwKbN95oYNLNSxietoDdosLPewiLtf7AGRBEEjY4/TUY+iSWQiYug7qc8MesySK8Vga2eZ0slRF7ux1UBg==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.8, 5.0.0)"
+          "AWSSDK.Core": "[4.0.9.2, 5.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Direct",
-        "requested": "[4.0.2.4, )",
-        "resolved": "4.0.2.4",
-        "contentHash": "QK+uszjOM6tr6WKbsDVP0/7/eTsOoi0zy11+wqHJ3r8Z3Vn5yiSVIvxjsrSSb6PS3EvkBWnzmqWJmemZ2tBc8g==",
+        "requested": "[4.0.2.7, )",
+        "resolved": "4.0.2.7",
+        "contentHash": "yKUwA8Agai2DdEHJbxONlgD+7XYqahr6YcGH/yixP7XrfVwg8ZkZZcGQSywrYWbfoqpuAImzoJmuyLii4ZqW2Q==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.8, 5.0.0)"
+          "AWSSDK.Core": "[4.0.9.2, 5.0.0)"
         }
       },
       "CSharpier.MsBuild": {
