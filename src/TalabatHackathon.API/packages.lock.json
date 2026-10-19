@@ -4,27 +4,27 @@
     "net8.0": {
       "AWSSDK.Core": {
         "type": "Direct",
-        "requested": "[4.0.102.10, )",
-        "resolved": "4.0.102.10",
-        "contentHash": "ngedi+19mHnszODbUrZLtpU6JeIXVbR/MxslGZPJIcC5YVZcJSZxasnde3+0iboQj9V9bKri7b8D+TXTrOW6Aw=="
+        "requested": "[4.0.102.11, )",
+        "resolved": "4.0.102.11",
+        "contentHash": "K9PP9/qHQ7pqSB0lYwStJrpXQ8P1xc7Fbn3CyPg8EX78p4+yz8dhIiwiRc3aVbVrUZxmPAPRvmZm+ey1euIXGg=="
       },
       "AWSSDK.Polly": {
         "type": "Direct",
-        "requested": "[4.0.100.18, )",
-        "resolved": "4.0.100.18",
-        "contentHash": "daxOP35ozD37KJ0iYnSt3t8zndjgkybpla0Za0Vp1LbzA/otM2qz6qVcEptSBexWfDBWF5RQNURJmDodG1Qacw==",
+        "requested": "[4.0.100.19, )",
+        "resolved": "4.0.100.19",
+        "contentHash": "W35FqjEzXOienseqPxJrJtR8WdG75YR/xhDYMGoHh73n7mFprem+QJbirM3RAWnOmOhFx3sT40FSvkMKlKbSFA==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.102.10, 5.0.0)"
+          "AWSSDK.Core": "[4.0.102.11, 5.0.0)"
         }
       },
       "AWSSDK.Translate": {
         "type": "Direct",
-        "requested": "[4.0.101.1, )",
-        "resolved": "4.0.101.1",
-        "contentHash": "RXMqv+48pTjOC71bUfrj922N5DRoQ6jAuRLRHqz0IOiA3itDLngqO2uLaiVAbFufkM3E888K+RxYLbyyu/bApw==",
+        "requested": "[4.0.101.2, )",
+        "resolved": "4.0.101.2",
+        "contentHash": "sMBF+2fekb4kTkLTobW8L/tgeokCfV9d8Mjc6AsDAh+/swI5HQo4T6iluFYwQo/IBbSWEkKIZ/eLRdemMp88OA==",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.102.10, 5.0.0)",
-          "AWSSDK.Extensions.CborProtocol": "[4.0.100.17, 5.0.0)"
+          "AWSSDK.Core": "[4.0.102.11, 5.0.0)",
+          "AWSSDK.Extensions.CborProtocol": "[4.0.100.19, 5.0.0)"
         }
       },
       "CSharpier.MsBuild": {
@@ -117,10 +117,10 @@
       },
       "AWSSDK.Extensions.CborProtocol": {
         "type": "Transitive",
-        "resolved": "4.0.100.17",
-        "contentHash": "taDKDuymY1Q7p3jjmsIzfzfzmTCzGHAIzZ2bIpTAzPuSW+1KiNuh4vGVbkbj3Hd1KwOUzDw+LIRz5P29oPnlFw==",
+        "resolved": "4.0.100.19",
+        "contentHash": "fFR80NxmBhnDe+f45pRSV0I65LePzChOeGYzCIBJuHM6gDqZAbzDlDMVZ93W6XiAtFAg6MGmUDnmWyem/Z3u6A==",
         "dependencies": {
-          "AWSSDK.Core": "4.0.102.10",
+          "AWSSDK.Core": "4.0.102.11",
           "System.Formats.Cbor": "9.0.5"
         }
       },
